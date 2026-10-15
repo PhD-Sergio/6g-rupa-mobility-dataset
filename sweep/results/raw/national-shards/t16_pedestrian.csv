@@ -1,0 +1,2 @@
+country,field,operator,mnc,gnbs,edge_upf,psa,agents,mobility_model,speed_kmh,handovers,ho_per_user_hr,l1_xn_pct,l2_n2_pct,psa_region_crossings,sigma_5g_bytes,sigma_6grupa_bytes,sigma_advantage_pct,core_writes_5g,core_writes_6grupa,anchor_dist_5g_km,anchor_dist_opt_km,stretch_excess_km
+france,anfr,SFR,10,32824,96,5,54256,pedestrian,5,72430,4.005,98.55,1.45,54,44033850,14486000,67.10,108962000,0,88.29,88.00,0.29

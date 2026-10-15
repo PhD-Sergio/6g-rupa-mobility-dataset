@@ -1,0 +1,28 @@
+agents = 274700
+psa = 20
+mobility_model = "RandomWaypoint(5.0, 0.0, 2.0)"
+instrumentation_sha256 = "9df07390e8b82c25e91edc58cb9ec1674cad15843ea48725aa9a9306c9896800"
+core_writes_5g = 246374000
+simulator_commit = "6bcbc7e7d33f10705803c2454695070140d3020f"
+field = "opencellid"
+country = "usa"
+speed_kmh = 5.0
+operator = "Verizon"
+captured_events = 163942
+matrix_sha256 = "4ccbc96431e2b613532268709de19c0b91424b48505d19bc82ef988c393190cc"
+julia = "1.11.9"
+duration_s = 1200.0
+seed = 2026102031
+handovers = 163942
+
+[modified_source_sha256]
+"src/Simulation/DistanceEvents.jl" = "9df07390e8b82c25e91edc58cb9ec1674cad15843ea48725aa9a9306c9896800"
+"src/Simulation/Handover.jl" = "49761d0181cab4e5c9f691be7fd57983f3e4c9fd84d6ee71d9c13dadbfa534e4"
+"src/Simulation.jl" = "bdf99006ec7d89fb0f75981b1e0e02f8efc5e3807eb724c1fd5409f39a48f4a9"
+"scripts/latency_run.jl" = "4e8c816061c03561745d6ecbb72ef83bcad4721fef96ad8f9c51a99bcd918b0d"
+
+[inputs]
+"icc-2027/simulator/data/usa/opencellid/311.csv" = "ecae5a07c1e9a3e64bf911553a133be766b25c15e041ceb1c25bcb6098e9098d"
+"icc-2027/simulator/data/usa/regions.geojson" = "8cc6a42199611cf570893e154542bde74b83cd70c110e475bc015cf437843af4"
+"icc-2027/simulator/data/usa/opencellid/310.csv" = "28862f9b38a48a1fa718e7395ad89b3f2e2130516128014659bdb074398090dd"
+"icc-2027/simulator/data/usa/municipalities.csv" = "4f910aa8958e8e42e026135b659d0d2498bb0a53a61378bb2f939bcd4b49c4d0"

@@ -1,0 +1,35 @@
+pathloss_exp = 3.5
+scale_factor = 1000
+agents = 30334
+psa = 4
+mobility_model = "RandomWaypoint(5.0, 0.0, 2.0)"
+instrumentation_sha256 = "e5bafa5744962e45f36f31e125eb72de45e826aaa2977901a69ac767340dbe6e"
+hysteresis_db = 3.0
+core_writes_5g = 103305000
+simulator_commit = "6bcbc7e7d33f10705803c2454695070140d3020f"
+field = "ised"
+country = "canada"
+speed_kmh = 0.0
+operator = "Telus"
+captured_events = 68773
+matrix_sha256 = "ae7aab1e10afed6f5732afb723440372f54b1ffcd0f7d805158606ba5683d2c7"
+julia = "1.11.9"
+duration_s = 1200.0
+seed = 2026101701
+handovers = 68773
+
+[modified_source_sha256]
+"src/Simulation/DistanceEvents.jl" = "e5bafa5744962e45f36f31e125eb72de45e826aaa2977901a69ac767340dbe6e"
+"src/Simulation/Handover.jl" = "49761d0181cab4e5c9f691be7fd57983f3e4c9fd84d6ee71d9c13dadbfa534e4"
+"src/Simulation.jl" = "bdf99006ec7d89fb0f75981b1e0e02f8efc5e3807eb724c1fd5409f39a48f4a9"
+"scripts/latency_run.jl" = "77e5b4efb3cd226e147fff792b24b89cccef92b5bdcf445354972fe979663494"
+
+[mix_counts]
+urban = 6158
+highway = 3029
+pedestrian = 21147
+
+[inputs]
+"icc-2027/simulator/data/canada/regions.geojson" = "cc593683c786449e406e27351f6838e097a70ef3b8ab846b0d434920bf516cb6"
+"icc-2027/simulator/data/canada/ised/302.csv" = "72c18454c1018a814674b02bb7416d5d0a27181821febf1015555c37279aeb87"
+"icc-2027/simulator/data/canada/municipalities.csv" = "3dd7b936a9b7f8d908c501936cb52e798eb3f3bddd7eec708569037fdea41ae4"

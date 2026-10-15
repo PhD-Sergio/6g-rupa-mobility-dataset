@@ -1,0 +1,1614 @@
+{
+  "name": "6grupa-vs-5g-mobility",
+  "title": "6G-RUPA vs 5G under Mobility — Reproducibility Dataset",
+  "description": "Multi-country handover, roaming, federation and terrestrial/non-terrestrial evaluation: real base-station fields from six countries and four sources, official small-area population layers, derived two-tier UPF/PSA deployments, and per-scenario core forwarding-state churn, per-event signaling cost (sigma) and anchor path-stretch (rho) metrics for 5G against 6G-RUPA.",
+  "licenses": [
+    {
+      "name": "CC-BY-SA-4.0",
+      "title": "Creative Commons Attribution-ShareAlike 4.0",
+      "path": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Sergio Gimenez",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenCellID",
+      "path": "https://opencellid.org"
+    },
+    {
+      "title": "FCC Antenna Structure Registration",
+      "path": "https://www.fcc.gov/uls"
+    },
+    {
+      "title": "ANFR, donnees sur les installations radioelectriques de plus de 5 watts",
+      "path": "https://www.data.gouv.fr/datasets/donnees-sur-les-installations-radioelectriques-de-plus-de-5-watts-1/"
+    },
+    {
+      "title": "ISED Terrestrial Spectrum Licence Site Data Extract",
+      "path": "https://ised-isde.canada.ca/site/spectrum-management-system/en/download-sms-data"
+    },
+    {
+      "title": "CNIG Nomenclator (Spain)",
+      "path": "https://www.ign.es/"
+    },
+    {
+      "title": "INE Portugal, Censos 2021",
+      "path": "https://www.ine.pt/"
+    },
+    {
+      "title": "geo.api.gouv.fr (INSEE legal population, IGN contours)",
+      "path": "https://geo.api.gouv.fr/"
+    },
+    {
+      "title": "Statistics Canada, 2021 Census",
+      "path": "https://www12.statcan.gc.ca/census-recensement/2021/"
+    },
+    {
+      "title": "INEGI, Censo de Poblacion y Vivienda 2020",
+      "path": "https://www.inegi.org.mx/programas/ccpv/2020/"
+    },
+    {
+      "title": "US Census Bureau population estimates",
+      "path": "https://www.census.gov/"
+    }
+  ],
+  "resources": [
+    {
+      "name": "spain-opencellid-214",
+      "path": "inputs/gnb/spain-opencellid-214.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Spain base-station field, OpenCellID MCC 214. 14-column OpenCellID layout; see PROVENANCE.md.",
+      "licenseNote": "CC-BY-SA-4.0",
+      "schema": {
+        "fields": [
+          {
+            "name": "radio",
+            "type": "string",
+            "description": "Radio generation label as recorded by the source (GSM/UMTS/LTE/NR). Placeholder 'LTE' for registry-derived files."
+          },
+          {
+            "name": "mcc",
+            "type": "integer",
+            "description": "Mobile Country Code."
+          },
+          {
+            "name": "net",
+            "type": "integer",
+            "description": "Mobile Network Code identifying the operator. 999 = operator-agnostic (FCC ASR)."
+          },
+          {
+            "name": "area",
+            "type": "integer",
+            "description": "Location/tracking area code. 0 in registry-derived files."
+          },
+          {
+            "name": "cell",
+            "type": "integer",
+            "description": "Cell identifier. Sequential placeholder in registry-derived files."
+          },
+          {
+            "name": "unit",
+            "type": "integer",
+            "description": "OpenCellID sector unit. 0 in registry-derived files."
+          },
+          {
+            "name": "lon",
+            "type": "number",
+            "description": "Longitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "lat",
+            "type": "number",
+            "description": "Latitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "range",
+            "type": "integer",
+            "description": "Estimated coverage radius in metres. Placeholder 1000 in registry-derived files."
+          },
+          {
+            "name": "samples",
+            "type": "integer",
+            "description": "Number of crowdsourced observations. Placeholder 1 in registry-derived files."
+          },
+          {
+            "name": "changeable",
+            "type": "integer",
+            "description": "OpenCellID flag: 1 = position estimated from samples, 0 = operator-supplied."
+          },
+          {
+            "name": "created",
+            "type": "integer",
+            "description": "Unix timestamp of first observation. 0 in registry-derived files."
+          },
+          {
+            "name": "updated",
+            "type": "integer",
+            "description": "Unix timestamp of last observation. 0 in registry-derived files."
+          },
+          {
+            "name": "averageSignal",
+            "type": "integer",
+            "description": "Mean received signal strength. 0 where unavailable."
+          }
+        ]
+      },
+      "dialect": {
+        "header": false
+      }
+    },
+    {
+      "name": "portugal-opencellid-268",
+      "path": "inputs/gnb/portugal-opencellid-268.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Portugal base-station field, OpenCellID MCC 268. 14-column OpenCellID layout; see PROVENANCE.md.",
+      "licenseNote": "CC-BY-SA-4.0",
+      "schema": {
+        "fields": [
+          {
+            "name": "radio",
+            "type": "string",
+            "description": "Radio generation label as recorded by the source (GSM/UMTS/LTE/NR). Placeholder 'LTE' for registry-derived files."
+          },
+          {
+            "name": "mcc",
+            "type": "integer",
+            "description": "Mobile Country Code."
+          },
+          {
+            "name": "net",
+            "type": "integer",
+            "description": "Mobile Network Code identifying the operator. 999 = operator-agnostic (FCC ASR)."
+          },
+          {
+            "name": "area",
+            "type": "integer",
+            "description": "Location/tracking area code. 0 in registry-derived files."
+          },
+          {
+            "name": "cell",
+            "type": "integer",
+            "description": "Cell identifier. Sequential placeholder in registry-derived files."
+          },
+          {
+            "name": "unit",
+            "type": "integer",
+            "description": "OpenCellID sector unit. 0 in registry-derived files."
+          },
+          {
+            "name": "lon",
+            "type": "number",
+            "description": "Longitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "lat",
+            "type": "number",
+            "description": "Latitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "range",
+            "type": "integer",
+            "description": "Estimated coverage radius in metres. Placeholder 1000 in registry-derived files."
+          },
+          {
+            "name": "samples",
+            "type": "integer",
+            "description": "Number of crowdsourced observations. Placeholder 1 in registry-derived files."
+          },
+          {
+            "name": "changeable",
+            "type": "integer",
+            "description": "OpenCellID flag: 1 = position estimated from samples, 0 = operator-supplied."
+          },
+          {
+            "name": "created",
+            "type": "integer",
+            "description": "Unix timestamp of first observation. 0 in registry-derived files."
+          },
+          {
+            "name": "updated",
+            "type": "integer",
+            "description": "Unix timestamp of last observation. 0 in registry-derived files."
+          },
+          {
+            "name": "averageSignal",
+            "type": "integer",
+            "description": "Mean received signal strength. 0 where unavailable."
+          }
+        ]
+      },
+      "dialect": {
+        "header": false
+      }
+    },
+    {
+      "name": "france-opencellid-208",
+      "path": "inputs/gnb/france-opencellid-208.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "France base-station field, OpenCellID MCC 208. 14-column OpenCellID layout; see PROVENANCE.md.",
+      "licenseNote": "CC-BY-SA-4.0",
+      "schema": {
+        "fields": [
+          {
+            "name": "radio",
+            "type": "string",
+            "description": "Radio generation label as recorded by the source (GSM/UMTS/LTE/NR). Placeholder 'LTE' for registry-derived files."
+          },
+          {
+            "name": "mcc",
+            "type": "integer",
+            "description": "Mobile Country Code."
+          },
+          {
+            "name": "net",
+            "type": "integer",
+            "description": "Mobile Network Code identifying the operator. 999 = operator-agnostic (FCC ASR)."
+          },
+          {
+            "name": "area",
+            "type": "integer",
+            "description": "Location/tracking area code. 0 in registry-derived files."
+          },
+          {
+            "name": "cell",
+            "type": "integer",
+            "description": "Cell identifier. Sequential placeholder in registry-derived files."
+          },
+          {
+            "name": "unit",
+            "type": "integer",
+            "description": "OpenCellID sector unit. 0 in registry-derived files."
+          },
+          {
+            "name": "lon",
+            "type": "number",
+            "description": "Longitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "lat",
+            "type": "number",
+            "description": "Latitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "range",
+            "type": "integer",
+            "description": "Estimated coverage radius in metres. Placeholder 1000 in registry-derived files."
+          },
+          {
+            "name": "samples",
+            "type": "integer",
+            "description": "Number of crowdsourced observations. Placeholder 1 in registry-derived files."
+          },
+          {
+            "name": "changeable",
+            "type": "integer",
+            "description": "OpenCellID flag: 1 = position estimated from samples, 0 = operator-supplied."
+          },
+          {
+            "name": "created",
+            "type": "integer",
+            "description": "Unix timestamp of first observation. 0 in registry-derived files."
+          },
+          {
+            "name": "updated",
+            "type": "integer",
+            "description": "Unix timestamp of last observation. 0 in registry-derived files."
+          },
+          {
+            "name": "averageSignal",
+            "type": "integer",
+            "description": "Mean received signal strength. 0 where unavailable."
+          }
+        ]
+      },
+      "dialect": {
+        "header": false
+      }
+    },
+    {
+      "name": "france-anfr-208",
+      "path": "inputs/gnb/france-anfr-208.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "France official base-station field, ANFR BNIR export, MNC-tagged. 14-column OpenCellID layout; see PROVENANCE.md.",
+      "licenseNote": "Licence Ouverte 2.0",
+      "schema": {
+        "fields": [
+          {
+            "name": "radio",
+            "type": "string",
+            "description": "Radio generation label as recorded by the source (GSM/UMTS/LTE/NR). Placeholder 'LTE' for registry-derived files."
+          },
+          {
+            "name": "mcc",
+            "type": "integer",
+            "description": "Mobile Country Code."
+          },
+          {
+            "name": "net",
+            "type": "integer",
+            "description": "Mobile Network Code identifying the operator. 999 = operator-agnostic (FCC ASR)."
+          },
+          {
+            "name": "area",
+            "type": "integer",
+            "description": "Location/tracking area code. 0 in registry-derived files."
+          },
+          {
+            "name": "cell",
+            "type": "integer",
+            "description": "Cell identifier. Sequential placeholder in registry-derived files."
+          },
+          {
+            "name": "unit",
+            "type": "integer",
+            "description": "OpenCellID sector unit. 0 in registry-derived files."
+          },
+          {
+            "name": "lon",
+            "type": "number",
+            "description": "Longitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "lat",
+            "type": "number",
+            "description": "Latitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "range",
+            "type": "integer",
+            "description": "Estimated coverage radius in metres. Placeholder 1000 in registry-derived files."
+          },
+          {
+            "name": "samples",
+            "type": "integer",
+            "description": "Number of crowdsourced observations. Placeholder 1 in registry-derived files."
+          },
+          {
+            "name": "changeable",
+            "type": "integer",
+            "description": "OpenCellID flag: 1 = position estimated from samples, 0 = operator-supplied."
+          },
+          {
+            "name": "created",
+            "type": "integer",
+            "description": "Unix timestamp of first observation. 0 in registry-derived files."
+          },
+          {
+            "name": "updated",
+            "type": "integer",
+            "description": "Unix timestamp of last observation. 0 in registry-derived files."
+          },
+          {
+            "name": "averageSignal",
+            "type": "integer",
+            "description": "Mean received signal strength. 0 where unavailable."
+          }
+        ]
+      },
+      "dialect": {
+        "header": false
+      }
+    },
+    {
+      "name": "usa-opencellid-310",
+      "path": "inputs/gnb/usa-opencellid-310.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "USA base-station field, OpenCellID MCC 310. 14-column OpenCellID layout; see PROVENANCE.md.",
+      "licenseNote": "CC-BY-SA-4.0",
+      "schema": {
+        "fields": [
+          {
+            "name": "radio",
+            "type": "string",
+            "description": "Radio generation label as recorded by the source (GSM/UMTS/LTE/NR). Placeholder 'LTE' for registry-derived files."
+          },
+          {
+            "name": "mcc",
+            "type": "integer",
+            "description": "Mobile Country Code."
+          },
+          {
+            "name": "net",
+            "type": "integer",
+            "description": "Mobile Network Code identifying the operator. 999 = operator-agnostic (FCC ASR)."
+          },
+          {
+            "name": "area",
+            "type": "integer",
+            "description": "Location/tracking area code. 0 in registry-derived files."
+          },
+          {
+            "name": "cell",
+            "type": "integer",
+            "description": "Cell identifier. Sequential placeholder in registry-derived files."
+          },
+          {
+            "name": "unit",
+            "type": "integer",
+            "description": "OpenCellID sector unit. 0 in registry-derived files."
+          },
+          {
+            "name": "lon",
+            "type": "number",
+            "description": "Longitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "lat",
+            "type": "number",
+            "description": "Latitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "range",
+            "type": "integer",
+            "description": "Estimated coverage radius in metres. Placeholder 1000 in registry-derived files."
+          },
+          {
+            "name": "samples",
+            "type": "integer",
+            "description": "Number of crowdsourced observations. Placeholder 1 in registry-derived files."
+          },
+          {
+            "name": "changeable",
+            "type": "integer",
+            "description": "OpenCellID flag: 1 = position estimated from samples, 0 = operator-supplied."
+          },
+          {
+            "name": "created",
+            "type": "integer",
+            "description": "Unix timestamp of first observation. 0 in registry-derived files."
+          },
+          {
+            "name": "updated",
+            "type": "integer",
+            "description": "Unix timestamp of last observation. 0 in registry-derived files."
+          },
+          {
+            "name": "averageSignal",
+            "type": "integer",
+            "description": "Mean received signal strength. 0 where unavailable."
+          }
+        ]
+      },
+      "dialect": {
+        "header": false
+      }
+    },
+    {
+      "name": "usa-opencellid-311",
+      "path": "inputs/gnb/usa-opencellid-311.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "USA base-station field, OpenCellID MCC 311. 14-column OpenCellID layout; see PROVENANCE.md.",
+      "licenseNote": "CC-BY-SA-4.0",
+      "schema": {
+        "fields": [
+          {
+            "name": "radio",
+            "type": "string",
+            "description": "Radio generation label as recorded by the source (GSM/UMTS/LTE/NR). Placeholder 'LTE' for registry-derived files."
+          },
+          {
+            "name": "mcc",
+            "type": "integer",
+            "description": "Mobile Country Code."
+          },
+          {
+            "name": "net",
+            "type": "integer",
+            "description": "Mobile Network Code identifying the operator. 999 = operator-agnostic (FCC ASR)."
+          },
+          {
+            "name": "area",
+            "type": "integer",
+            "description": "Location/tracking area code. 0 in registry-derived files."
+          },
+          {
+            "name": "cell",
+            "type": "integer",
+            "description": "Cell identifier. Sequential placeholder in registry-derived files."
+          },
+          {
+            "name": "unit",
+            "type": "integer",
+            "description": "OpenCellID sector unit. 0 in registry-derived files."
+          },
+          {
+            "name": "lon",
+            "type": "number",
+            "description": "Longitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "lat",
+            "type": "number",
+            "description": "Latitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "range",
+            "type": "integer",
+            "description": "Estimated coverage radius in metres. Placeholder 1000 in registry-derived files."
+          },
+          {
+            "name": "samples",
+            "type": "integer",
+            "description": "Number of crowdsourced observations. Placeholder 1 in registry-derived files."
+          },
+          {
+            "name": "changeable",
+            "type": "integer",
+            "description": "OpenCellID flag: 1 = position estimated from samples, 0 = operator-supplied."
+          },
+          {
+            "name": "created",
+            "type": "integer",
+            "description": "Unix timestamp of first observation. 0 in registry-derived files."
+          },
+          {
+            "name": "updated",
+            "type": "integer",
+            "description": "Unix timestamp of last observation. 0 in registry-derived files."
+          },
+          {
+            "name": "averageSignal",
+            "type": "integer",
+            "description": "Mean received signal strength. 0 where unavailable."
+          }
+        ]
+      },
+      "dialect": {
+        "header": false
+      }
+    },
+    {
+      "name": "usa-fcc-asr-310",
+      "path": "inputs/gnb/usa-fcc-asr-310.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "USA official structure field, FCC Antenna Structure Registration, CONUS, operator-agnostic. 14-column OpenCellID layout; see PROVENANCE.md.",
+      "licenseNote": "US public domain",
+      "schema": {
+        "fields": [
+          {
+            "name": "radio",
+            "type": "string",
+            "description": "Radio generation label as recorded by the source (GSM/UMTS/LTE/NR). Placeholder 'LTE' for registry-derived files."
+          },
+          {
+            "name": "mcc",
+            "type": "integer",
+            "description": "Mobile Country Code."
+          },
+          {
+            "name": "net",
+            "type": "integer",
+            "description": "Mobile Network Code identifying the operator. 999 = operator-agnostic (FCC ASR)."
+          },
+          {
+            "name": "area",
+            "type": "integer",
+            "description": "Location/tracking area code. 0 in registry-derived files."
+          },
+          {
+            "name": "cell",
+            "type": "integer",
+            "description": "Cell identifier. Sequential placeholder in registry-derived files."
+          },
+          {
+            "name": "unit",
+            "type": "integer",
+            "description": "OpenCellID sector unit. 0 in registry-derived files."
+          },
+          {
+            "name": "lon",
+            "type": "number",
+            "description": "Longitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "lat",
+            "type": "number",
+            "description": "Latitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "range",
+            "type": "integer",
+            "description": "Estimated coverage radius in metres. Placeholder 1000 in registry-derived files."
+          },
+          {
+            "name": "samples",
+            "type": "integer",
+            "description": "Number of crowdsourced observations. Placeholder 1 in registry-derived files."
+          },
+          {
+            "name": "changeable",
+            "type": "integer",
+            "description": "OpenCellID flag: 1 = position estimated from samples, 0 = operator-supplied."
+          },
+          {
+            "name": "created",
+            "type": "integer",
+            "description": "Unix timestamp of first observation. 0 in registry-derived files."
+          },
+          {
+            "name": "updated",
+            "type": "integer",
+            "description": "Unix timestamp of last observation. 0 in registry-derived files."
+          },
+          {
+            "name": "averageSignal",
+            "type": "integer",
+            "description": "Mean received signal strength. 0 where unavailable."
+          }
+        ]
+      },
+      "dialect": {
+        "header": false
+      }
+    },
+    {
+      "name": "canada-opencellid-302",
+      "path": "inputs/gnb/canada-opencellid-302.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Canada base-station field, OpenCellID MCC 302. 14-column OpenCellID layout; see PROVENANCE.md.",
+      "licenseNote": "CC-BY-SA-4.0",
+      "schema": {
+        "fields": [
+          {
+            "name": "radio",
+            "type": "string",
+            "description": "Radio generation label as recorded by the source (GSM/UMTS/LTE/NR). Placeholder 'LTE' for registry-derived files."
+          },
+          {
+            "name": "mcc",
+            "type": "integer",
+            "description": "Mobile Country Code."
+          },
+          {
+            "name": "net",
+            "type": "integer",
+            "description": "Mobile Network Code identifying the operator. 999 = operator-agnostic (FCC ASR)."
+          },
+          {
+            "name": "area",
+            "type": "integer",
+            "description": "Location/tracking area code. 0 in registry-derived files."
+          },
+          {
+            "name": "cell",
+            "type": "integer",
+            "description": "Cell identifier. Sequential placeholder in registry-derived files."
+          },
+          {
+            "name": "unit",
+            "type": "integer",
+            "description": "OpenCellID sector unit. 0 in registry-derived files."
+          },
+          {
+            "name": "lon",
+            "type": "number",
+            "description": "Longitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "lat",
+            "type": "number",
+            "description": "Latitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "range",
+            "type": "integer",
+            "description": "Estimated coverage radius in metres. Placeholder 1000 in registry-derived files."
+          },
+          {
+            "name": "samples",
+            "type": "integer",
+            "description": "Number of crowdsourced observations. Placeholder 1 in registry-derived files."
+          },
+          {
+            "name": "changeable",
+            "type": "integer",
+            "description": "OpenCellID flag: 1 = position estimated from samples, 0 = operator-supplied."
+          },
+          {
+            "name": "created",
+            "type": "integer",
+            "description": "Unix timestamp of first observation. 0 in registry-derived files."
+          },
+          {
+            "name": "updated",
+            "type": "integer",
+            "description": "Unix timestamp of last observation. 0 in registry-derived files."
+          },
+          {
+            "name": "averageSignal",
+            "type": "integer",
+            "description": "Mean received signal strength. 0 where unavailable."
+          }
+        ]
+      },
+      "dialect": {
+        "header": false
+      }
+    },
+    {
+      "name": "canada-ised-302",
+      "path": "inputs/gnb/canada-ised-302.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Canada official site field, ISED Terrestrial Spectrum Licence Site Data Extract, MNC-tagged. 14-column OpenCellID layout; see PROVENANCE.md.",
+      "licenseNote": "Open Government Licence - Canada 2.0",
+      "schema": {
+        "fields": [
+          {
+            "name": "radio",
+            "type": "string",
+            "description": "Radio generation label as recorded by the source (GSM/UMTS/LTE/NR). Placeholder 'LTE' for registry-derived files."
+          },
+          {
+            "name": "mcc",
+            "type": "integer",
+            "description": "Mobile Country Code."
+          },
+          {
+            "name": "net",
+            "type": "integer",
+            "description": "Mobile Network Code identifying the operator. 999 = operator-agnostic (FCC ASR)."
+          },
+          {
+            "name": "area",
+            "type": "integer",
+            "description": "Location/tracking area code. 0 in registry-derived files."
+          },
+          {
+            "name": "cell",
+            "type": "integer",
+            "description": "Cell identifier. Sequential placeholder in registry-derived files."
+          },
+          {
+            "name": "unit",
+            "type": "integer",
+            "description": "OpenCellID sector unit. 0 in registry-derived files."
+          },
+          {
+            "name": "lon",
+            "type": "number",
+            "description": "Longitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "lat",
+            "type": "number",
+            "description": "Latitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "range",
+            "type": "integer",
+            "description": "Estimated coverage radius in metres. Placeholder 1000 in registry-derived files."
+          },
+          {
+            "name": "samples",
+            "type": "integer",
+            "description": "Number of crowdsourced observations. Placeholder 1 in registry-derived files."
+          },
+          {
+            "name": "changeable",
+            "type": "integer",
+            "description": "OpenCellID flag: 1 = position estimated from samples, 0 = operator-supplied."
+          },
+          {
+            "name": "created",
+            "type": "integer",
+            "description": "Unix timestamp of first observation. 0 in registry-derived files."
+          },
+          {
+            "name": "updated",
+            "type": "integer",
+            "description": "Unix timestamp of last observation. 0 in registry-derived files."
+          },
+          {
+            "name": "averageSignal",
+            "type": "integer",
+            "description": "Mean received signal strength. 0 where unavailable."
+          }
+        ]
+      },
+      "dialect": {
+        "header": false
+      }
+    },
+    {
+      "name": "mexico-opencellid-334",
+      "path": "inputs/gnb/mexico-opencellid-334.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Mexico base-station field, OpenCellID MCC 334. 14-column OpenCellID layout; see PROVENANCE.md.",
+      "licenseNote": "CC-BY-SA-4.0",
+      "schema": {
+        "fields": [
+          {
+            "name": "radio",
+            "type": "string",
+            "description": "Radio generation label as recorded by the source (GSM/UMTS/LTE/NR). Placeholder 'LTE' for registry-derived files."
+          },
+          {
+            "name": "mcc",
+            "type": "integer",
+            "description": "Mobile Country Code."
+          },
+          {
+            "name": "net",
+            "type": "integer",
+            "description": "Mobile Network Code identifying the operator. 999 = operator-agnostic (FCC ASR)."
+          },
+          {
+            "name": "area",
+            "type": "integer",
+            "description": "Location/tracking area code. 0 in registry-derived files."
+          },
+          {
+            "name": "cell",
+            "type": "integer",
+            "description": "Cell identifier. Sequential placeholder in registry-derived files."
+          },
+          {
+            "name": "unit",
+            "type": "integer",
+            "description": "OpenCellID sector unit. 0 in registry-derived files."
+          },
+          {
+            "name": "lon",
+            "type": "number",
+            "description": "Longitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "lat",
+            "type": "number",
+            "description": "Latitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "range",
+            "type": "integer",
+            "description": "Estimated coverage radius in metres. Placeholder 1000 in registry-derived files."
+          },
+          {
+            "name": "samples",
+            "type": "integer",
+            "description": "Number of crowdsourced observations. Placeholder 1 in registry-derived files."
+          },
+          {
+            "name": "changeable",
+            "type": "integer",
+            "description": "OpenCellID flag: 1 = position estimated from samples, 0 = operator-supplied."
+          },
+          {
+            "name": "created",
+            "type": "integer",
+            "description": "Unix timestamp of first observation. 0 in registry-derived files."
+          },
+          {
+            "name": "updated",
+            "type": "integer",
+            "description": "Unix timestamp of last observation. 0 in registry-derived files."
+          },
+          {
+            "name": "averageSignal",
+            "type": "integer",
+            "description": "Mean received signal strength. 0 where unavailable."
+          }
+        ]
+      },
+      "dialect": {
+        "header": false
+      }
+    },
+    {
+      "name": "spain-municipalities",
+      "path": "inputs/population/spain-municipalities.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Spain small-area population layer (municipios), source: INE / CNIG. Weights agent placement; paired with spain-regions.geojson.gz for rejection sampling.",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "string",
+            "description": "National municipality code, zero-padded as issued by the statistical office."
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "Municipality name."
+          },
+          {
+            "name": "population",
+            "type": "integer",
+            "description": "Resident population from the national census or legal-population series."
+          },
+          {
+            "name": "lat",
+            "type": "number",
+            "description": "Municipality centroid latitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "lon",
+            "type": "number",
+            "description": "Municipality centroid longitude, WGS84 decimal degrees."
+          }
+        ]
+      }
+    },
+    {
+      "name": "portugal-municipalities",
+      "path": "inputs/population/portugal-municipalities.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Portugal small-area population layer (concelhos, mainland), source: INE Portugal Censos 2021 / DGT CAOP 2025. Weights agent placement; paired with portugal-regions.geojson.gz for rejection sampling.",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "string",
+            "description": "National municipality code, zero-padded as issued by the statistical office."
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "Municipality name."
+          },
+          {
+            "name": "population",
+            "type": "integer",
+            "description": "Resident population from the national census or legal-population series."
+          },
+          {
+            "name": "lat",
+            "type": "number",
+            "description": "Municipality centroid latitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "lon",
+            "type": "number",
+            "description": "Municipality centroid longitude, WGS84 decimal degrees."
+          }
+        ]
+      }
+    },
+    {
+      "name": "france-municipalities",
+      "path": "inputs/population/france-municipalities.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "France small-area population layer (communes, metropolitan France), source: INSEE / IGN via geo.api.gouv.fr. Weights agent placement; paired with france-regions.geojson.gz for rejection sampling.",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "string",
+            "description": "National municipality code, zero-padded as issued by the statistical office."
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "Municipality name."
+          },
+          {
+            "name": "population",
+            "type": "integer",
+            "description": "Resident population from the national census or legal-population series."
+          },
+          {
+            "name": "lat",
+            "type": "number",
+            "description": "Municipality centroid latitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "lon",
+            "type": "number",
+            "description": "Municipality centroid longitude, WGS84 decimal degrees."
+          }
+        ]
+      }
+    },
+    {
+      "name": "usa-municipalities",
+      "path": "inputs/population/usa-municipalities.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Usa small-area population layer (counties, CONUS), source: US Census Bureau. Weights agent placement; paired with usa-regions.geojson.gz for rejection sampling.",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "string",
+            "description": "National municipality code, zero-padded as issued by the statistical office."
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "Municipality name."
+          },
+          {
+            "name": "population",
+            "type": "integer",
+            "description": "Resident population from the national census or legal-population series."
+          },
+          {
+            "name": "lat",
+            "type": "number",
+            "description": "Municipality centroid latitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "lon",
+            "type": "number",
+            "description": "Municipality centroid longitude, WGS84 decimal degrees."
+          }
+        ]
+      }
+    },
+    {
+      "name": "canada-municipalities",
+      "path": "inputs/population/canada-municipalities.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Canada small-area population layer (census subdivisions), source: Statistics Canada 2021 Census. Weights agent placement; paired with canada-regions.geojson.gz for rejection sampling.",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "string",
+            "description": "National municipality code, zero-padded as issued by the statistical office."
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "Municipality name."
+          },
+          {
+            "name": "population",
+            "type": "integer",
+            "description": "Resident population from the national census or legal-population series."
+          },
+          {
+            "name": "lat",
+            "type": "number",
+            "description": "Municipality centroid latitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "lon",
+            "type": "number",
+            "description": "Municipality centroid longitude, WGS84 decimal degrees."
+          }
+        ]
+      }
+    },
+    {
+      "name": "mexico-municipalities",
+      "path": "inputs/population/mexico-municipalities.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Mexico small-area population layer (municipios), source: INEGI Censo 2020 / CONABIO. Weights agent placement; paired with mexico-regions.geojson.gz for rejection sampling.",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "string",
+            "description": "National municipality code, zero-padded as issued by the statistical office."
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "Municipality name."
+          },
+          {
+            "name": "population",
+            "type": "integer",
+            "description": "Resident population from the national census or legal-population series."
+          },
+          {
+            "name": "lat",
+            "type": "number",
+            "description": "Municipality centroid latitude, WGS84 decimal degrees."
+          },
+          {
+            "name": "lon",
+            "type": "number",
+            "description": "Municipality centroid longitude, WGS84 decimal degrees."
+          }
+        ]
+      }
+    },
+    {
+      "name": "national-sweep",
+      "path": "results/national-sweep.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Intra-PLMN evaluation. 27 targets (country x base-station field x operator) times three mobility profiles, 81 rows. 1200 s, scale factor 1000, agents = population x 0.82 / 1000. Output of PLMN-GraphSim runs/national_sweep.jl.",
+      "schema": {
+        "fields": [
+          {
+            "name": "country",
+            "type": "string",
+            "description": "spain | portugal | france | canada | mexico | usa"
+          },
+          {
+            "name": "field",
+            "type": "string",
+            "description": "base-station source: opencellid | anfr | ised | fcc-asr"
+          },
+          {
+            "name": "operator",
+            "type": "string",
+            "description": "real operator label"
+          },
+          {
+            "name": "mnc",
+            "type": "integer",
+            "description": "mobile network code selecting the operator's records; 999 for the operator-agnostic FCC ASR field"
+          },
+          {
+            "name": "gnbs",
+            "type": "integer",
+            "description": "base stations retained for this operator after the country-boundary filter"
+          },
+          {
+            "name": "edge_upf",
+            "type": "integer",
+            "description": "edge UL-CL UPF count (second-level admin units above 50k inhabitants)"
+          },
+          {
+            "name": "psa",
+            "type": "integer",
+            "description": "centralized PSA (anchor) count, round(pop/10M) clamped to [2,5]"
+          },
+          {
+            "name": "agents",
+            "type": "integer",
+            "description": "population-derived mobile agents; one agent represents 1000 subscribers"
+          },
+          {
+            "name": "mobility_model",
+            "type": "string",
+            "description": "pedestrian (RWP 5 km/h) | urban (RWP 50 km/h) | highway (Gauss-Markov 120 km/h)"
+          },
+          {
+            "name": "speed_kmh",
+            "type": "number"
+          },
+          {
+            "name": "handovers",
+            "type": "integer"
+          },
+          {
+            "name": "ho_per_user_hr",
+            "type": "number"
+          },
+          {
+            "name": "l1_xn_pct",
+            "type": "number",
+            "description": "depth-1 share: target gNB under the same edge UPF"
+          },
+          {
+            "name": "l2_n2_pct",
+            "type": "number",
+            "description": "depth-2 share: edge UPF changes, anchor pinned"
+          },
+          {
+            "name": "psa_region_crossings",
+            "type": "integer",
+            "description": "geometric anchor-region crossings; priced at depth 3 but never triggered under SSC mode 1"
+          },
+          {
+            "name": "sigma_5g_bytes",
+            "type": "integer",
+            "description": "cumulative 5G control signaling"
+          },
+          {
+            "name": "sigma_6grupa_bytes",
+            "type": "integer",
+            "description": "cumulative 6G-RUPA control signaling (flat 200 B per event)"
+          },
+          {
+            "name": "sigma_advantage_pct",
+            "type": "number",
+            "description": "100 x (1 - sigma_6grupa/sigma_5g)"
+          },
+          {
+            "name": "core_writes_5g",
+            "type": "integer",
+            "description": "cumulative core forwarding-state writes, O(n) in sessions"
+          },
+          {
+            "name": "core_writes_6grupa",
+            "type": "integer",
+            "description": "always 0: no handover changes the core prefix set"
+          },
+          {
+            "name": "anchor_dist_5g_km",
+            "type": "number",
+            "description": "mean serving edge to pinned anchor (5G hairpin)"
+          },
+          {
+            "name": "anchor_dist_opt_km",
+            "type": "number",
+            "description": "mean serving edge to nearest anchor (local egress)"
+          },
+          {
+            "name": "stretch_excess_km",
+            "type": "number",
+            "description": "rho: anchor-induced path-length excess"
+          }
+        ]
+      }
+    },
+    {
+      "name": "anchor-sweep",
+      "path": "results/anchor-sweep.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Anchor-count sensitivity. Six countries x five anchor counts (2, 5, 10, 20, 40) x two mobility profiles, 60 rows. Tests that sigma and the core-write columns are insensitive to the anchor count, which is fixed elsewhere by a clamped rule, while rho falls monotonically as anchors are added. The anchor set is re-clustered for every count, so each row is a genuine redeployment. Output of PLMN-GraphSim runs/anchor_sweep.jl.",
+      "schema": {
+        "fields": [
+          {
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "name": "operator",
+            "type": "string"
+          },
+          {
+            "name": "gnbs",
+            "type": "integer"
+          },
+          {
+            "name": "edge_upf",
+            "type": "integer",
+            "description": "held fixed at the country's national partition"
+          },
+          {
+            "name": "psa",
+            "type": "integer",
+            "description": "swept anchor count"
+          },
+          {
+            "name": "agents",
+            "type": "integer"
+          },
+          {
+            "name": "mobility_model",
+            "type": "string",
+            "description": "pedestrian | highway"
+          },
+          {
+            "name": "handovers",
+            "type": "integer"
+          },
+          {
+            "name": "l2_n2_pct",
+            "type": "number"
+          },
+          {
+            "name": "psa_region_crossings",
+            "type": "integer"
+          },
+          {
+            "name": "sigma_5g_bytes",
+            "type": "integer"
+          },
+          {
+            "name": "sigma_6grupa_bytes",
+            "type": "integer"
+          },
+          {
+            "name": "sigma_advantage_pct",
+            "type": "number"
+          },
+          {
+            "name": "core_writes_5g",
+            "type": "integer"
+          },
+          {
+            "name": "core_writes_6grupa",
+            "type": "integer"
+          },
+          {
+            "name": "anchor_dist_5g_km",
+            "type": "number"
+          },
+          {
+            "name": "anchor_dist_opt_km",
+            "type": "number"
+          },
+          {
+            "name": "stretch_excess_km",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "federation-continental",
+      "path": "results/federation-continental.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Two independent continental federations, each grown country-first from K=2 to K=6, under both 5G border semantics and three mobility profiles: 60 rows over 749,121 base stations. Europe: Movistar ES, MEO PT, Orange FR, Vodafone ES, NOS PT, SFR FR. North America: Verizon US, Telus CA, Telcel MX, AT&T US, Rogers CA, Movistar MX. Members are contiguous on the ground, because an inter-member crossing has to be reachable. Output of PLMN-GraphSim runs/federation_continental.jl.",
+      "schema": {
+        "fields": [
+          {
+            "name": "federation",
+            "type": "string",
+            "description": "europe | north_america"
+          },
+          {
+            "name": "members",
+            "type": "string",
+            "description": "pipe-separated member list at this K"
+          },
+          {
+            "name": "K",
+            "type": "integer",
+            "description": "federation size"
+          },
+          {
+            "name": "bilateral_agreements",
+            "type": "integer",
+            "description": "5G roaming mesh size K(K-1)/2, of six configured artifacts each"
+          },
+          {
+            "name": "rupa_enrollments",
+            "type": "integer",
+            "description": "6G-RUPA internetwork-layer enrollments, O(K)"
+          },
+          {
+            "name": "semantics",
+            "type": "string",
+            "description": "reestablish (deployed behaviour: a crossing re-establishes the PDU session) | ideal_ho (a seamless cross-border handover that no clause defines)"
+          },
+          {
+            "name": "mobility_model",
+            "type": "string"
+          },
+          {
+            "name": "handovers",
+            "type": "integer"
+          },
+          {
+            "name": "roam_entries",
+            "type": "integer",
+            "description": "inter-member crossings"
+          },
+          {
+            "name": "crossings_per_agent_hr",
+            "type": "number",
+            "description": "the federation-viability rate"
+          },
+          {
+            "name": "intra_sigma_adv_pct",
+            "type": "number",
+            "description": "within-member advantage, expected to stay at the national band"
+          },
+          {
+            "name": "roam_sigma_adv_pct",
+            "type": "number",
+            "description": "per-crossing advantage"
+          },
+          {
+            "name": "session_breaks_5g",
+            "type": "integer",
+            "description": "scaled; zero under ideal_ho and always zero for 6G-RUPA"
+          },
+          {
+            "name": "roam_path_5g_km",
+            "type": "number",
+            "description": "mean hairpin: serving edge abroad to home anchor"
+          },
+          {
+            "name": "roam_path_opt_km",
+            "type": "number",
+            "description": "mean nearest-anchor egress"
+          },
+          {
+            "name": "roam_excess_km",
+            "type": "number",
+            "description": "rho at the member border"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ntn-sweep",
+      "path": "results/ntn-sweep.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Terrestrial/non-terrestrial composition. The Starlink 550 km shell is run against nine national fields in turn, because how often a user falls off terrestrial coverage is a property of the country and of the field's granularity, not of the constellation: 9 targets x 4 terrestrial-range thresholds x 3 mobility profiles x 2 satellite-handover semantics, 216 rows. SGP4 propagation, one-second shared snapshots, 25 degree minimum elevation, 50k agent cap so every country costs the same and the satellite-served fraction stays a per-agent statistic. Output of PLMN-GraphSim runs/ntn_sweep.jl.",
+      "schema": {
+        "fields": [
+          {
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "name": "field",
+            "type": "string"
+          },
+          {
+            "name": "operator",
+            "type": "string"
+          },
+          {
+            "name": "mnc",
+            "type": "integer"
+          },
+          {
+            "name": "gnbs",
+            "type": "integer"
+          },
+          {
+            "name": "constellation",
+            "type": "string"
+          },
+          {
+            "name": "r_terr_km",
+            "type": "number",
+            "description": "maximum modeled terrestrial coverage radius; beyond it an agent attaches to the satellite member"
+          },
+          {
+            "name": "mobility_model",
+            "type": "string",
+            "description": "stationary | pedestrian | highway"
+          },
+          {
+            "name": "satellite_ho_semantics",
+            "type": "string",
+            "description": "xn | n2 endpoint of the serving-satellite handover sensitivity"
+          },
+          {
+            "name": "agents",
+            "type": "integer"
+          },
+          {
+            "name": "duration_s",
+            "type": "integer"
+          },
+          {
+            "name": "satellite_served_pct",
+            "type": "number",
+            "description": "share of agent ticks served by the NTN member"
+          },
+          {
+            "name": "outage_pct",
+            "type": "number",
+            "description": "share with neither terrestrial nor qualifying satellite service"
+          },
+          {
+            "name": "ntn_attach_events",
+            "type": "integer",
+            "description": "terrestrial to satellite crossings"
+          },
+          {
+            "name": "ntn_return_events",
+            "type": "integer",
+            "description": "satellite to terrestrial crossings"
+          },
+          {
+            "name": "satellite_handovers",
+            "type": "integer",
+            "description": "serving-satellite changes inside the NTN member; these occur without user motion because the network moves"
+          },
+          {
+            "name": "sigma_crossing_5g",
+            "type": "integer"
+          },
+          {
+            "name": "sigma_crossing_rupa",
+            "type": "integer"
+          },
+          {
+            "name": "crossing_advantage_pct",
+            "type": "number"
+          },
+          {
+            "name": "sigma_satellite_ho_5g",
+            "type": "integer"
+          },
+          {
+            "name": "sigma_satellite_ho_rupa",
+            "type": "integer"
+          },
+          {
+            "name": "satellite_ho_advantage_pct",
+            "type": "number"
+          },
+          {
+            "name": "session_breaks_5g",
+            "type": "integer",
+            "description": "scaled breaks at terrestrial/NTN crossings"
+          },
+          {
+            "name": "terrestrial_advantage_pct",
+            "type": "number",
+            "description": "within-country advantage, reported to show the constellation does not perturb it"
+          }
+        ]
+      }
+    },
+    {
+      "name": "churn-data-verizon-1200",
+      "path": "results/churn-data-verizon-1200.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Core forwarding-state churn against active users, the headline figure. Verizon OpenCellID field, 817 edge UPFs, 5 anchors, 120 km/h Gauss-Markov, full 1200 s, scale factor 1000, paired seeds per population point. Output of PLMN-GraphSim runs/churn_data_usa.jl.",
+      "schema": {
+        "fields": [
+          {
+            "name": "field",
+            "type": "string"
+          },
+          {
+            "name": "agents",
+            "type": "integer"
+          },
+          {
+            "name": "users",
+            "type": "integer",
+            "description": "agents x 1000 represented subscribers"
+          },
+          {
+            "name": "handovers",
+            "type": "integer"
+          },
+          {
+            "name": "core_writes_5g",
+            "type": "integer"
+          },
+          {
+            "name": "core_writes_rupa",
+            "type": "integer"
+          }
+        ]
+      }
+    },
+    {
+      "name": "churn-data-usa",
+      "path": "results/churn-data-usa.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Source check for the headline churn figure: the same sweep run on both US fields, Verizon OpenCellID and FCC ASR, at 300 s. Confirms the linear growth is not a property of one field.",
+      "schema": {
+        "fields": [
+          {
+            "name": "field",
+            "type": "string"
+          },
+          {
+            "name": "agents",
+            "type": "integer"
+          },
+          {
+            "name": "users",
+            "type": "integer"
+          },
+          {
+            "name": "handovers",
+            "type": "integer"
+          },
+          {
+            "name": "core_writes_5g",
+            "type": "integer"
+          },
+          {
+            "name": "core_writes_rupa",
+            "type": "integer"
+          }
+        ]
+      }
+    }
+  ]
+}

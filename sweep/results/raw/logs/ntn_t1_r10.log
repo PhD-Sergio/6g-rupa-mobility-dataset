@@ -1,0 +1,20 @@
+  Activating project at `~/plmn-graphsim`
+[ Info: Loaded 8044 municipalities.
+[ Info: Filtered 46396 gNBs for Operator ID 7.
+[ Info: Clustering 46396 gNBs into 52 UPF regions...
+[ Info: Clustering 52 Edge UPFs into 5 Centralized UPF regions...
+[ Info: Building Network Graph with 52 UPFs and 46396 gNBs...
+[ Info: Adding 5 Centralized UPFs to the graph...
+>>> ntn_sweep idx:1 50000 1200 results/ntn_shards/n1_r10.csv all 10 xn,n2 starlink
+ntn_sweep: 1 targets x 1 ranges x 3 profiles x 2 semantics -> results/ntn_shards/n1_r10.csv
+
+==========================================================================
+spain/opencellid/Movistar: 46396 gNBs, 40544 agents (0.9 min elapsed)
+  r=10km stationary  xn  sat=3.27% up/down=1324/0 satHO=25852 cross-adv=86.2% breaks5G=2013000 (5.6 min)
+  r=10km stationary  n2  sat=3.27% up/down=1324/0 satHO=25852 cross-adv=86.2% breaks5G=2013000 (4.8 min)
+  r=10km pedestrian  xn  sat=3.21% up/down=1509/214 satHO=25063 cross-adv=86.2% breaks5G=2556000 (4.9 min)
+  r=10km pedestrian  n2  sat=3.21% up/down=1509/214 satHO=25063 cross-adv=86.2% breaks5G=2556000 (4.0 min)
+  r=10km highway     xn  sat=10.92% up/down=16640/8650 satHO=95966 cross-adv=86.2% breaks5G=37753000 (5.4 min)
+  r=10km highway     n2  sat=10.92% up/down=16640/8650 satHO=95966 cross-adv=86.2% breaks5G=37753000 (5.2 min)
+
+done in 30.8 min -> results/ntn_shards/n1_r10.csv

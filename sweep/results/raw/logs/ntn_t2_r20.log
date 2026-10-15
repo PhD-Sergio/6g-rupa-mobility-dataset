@@ -1,0 +1,20 @@
+  Activating project at `~/plmn-graphsim`
+[ Info: Loaded 278 municipalities.
+[ Info: Filtered 6506 gNBs for Operator ID 6.
+[ Info: Clustering 6506 gNBs into 18 UPF regions...
+[ Info: Clustering 18 Edge UPFs into 2 Centralized UPF regions...
+[ Info: Building Network Graph with 18 UPFs and 6506 gNBs...
+[ Info: Adding 2 Centralized UPFs to the graph...
+>>> ntn_sweep idx:2 50000 1200 results/ntn_shards/n2_r20.csv all 20 xn,n2 starlink
+ntn_sweep: 1 targets x 1 ranges x 3 profiles x 2 semantics -> results/ntn_shards/n2_r20.csv
+
+==========================================================================
+portugal/opencellid/MEO: 6506 gNBs, 8082 agents (0.3 min elapsed)
+  r=20km stationary  xn  sat=3.02% up/down=244/0 satHO=4821 cross-adv=86.2% breaks5G=359000 (1.3 min)
+  r=20km stationary  n2  sat=3.02% up/down=244/0 satHO=4821 cross-adv=86.2% breaks5G=359000 (0.8 min)
+  r=20km pedestrian  xn  sat=3.26% up/down=284/23 satHO=5166 cross-adv=86.2% breaks5G=445000 (1.0 min)
+  r=20km pedestrian  n2  sat=3.26% up/down=284/23 satHO=5166 cross-adv=86.2% breaks5G=445000 (1.0 min)
+  r=20km highway     xn  sat=5.28% up/down=1439/542 satHO=8430 cross-adv=86.2% breaks5G=2940000 (0.8 min)
+  r=20km highway     n2  sat=5.28% up/down=1439/542 satHO=8430 cross-adv=86.2% breaks5G=2940000 (0.8 min)
+
+done in 6.1 min -> results/ntn_shards/n2_r20.csv

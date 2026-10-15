@@ -1,0 +1,2 @@
+country,field,operator,mnc,gnbs,edge_upf,psa,agents,mobility_model,speed_kmh,handovers,ho_per_user_hr,l1_xn_pct,l2_n2_pct,psa_region_crossings,sigma_5g_bytes,sigma_6grupa_bytes,sigma_advantage_pct,core_writes_5g,core_writes_6grupa,anchor_dist_5g_km,anchor_dist_opt_km,stretch_excess_km
+usa,fcc-asr,all-structures,999,192707,817,5,274700,pedestrian,5,162086,1.770,95.49,4.51,137,101268250,32417200,67.99,243275000,0,469.31,467.57,1.73

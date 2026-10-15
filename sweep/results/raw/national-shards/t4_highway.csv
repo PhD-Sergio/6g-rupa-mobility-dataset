@@ -1,0 +1,2 @@
+country,field,operator,mnc,gnbs,edge_upf,psa,agents,mobility_model,speed_kmh,handovers,ho_per_user_hr,l1_xn_pct,l2_n2_pct,psa_region_crossings,sigma_5g_bytes,sigma_6grupa_bytes,sigma_advantage_pct,core_writes_5g,core_writes_6grupa,anchor_dist_5g_km,anchor_dist_opt_km,stretch_excess_km
+portugal,opencellid,MEO,6,6506,18,2,8082,highway,120,170991,63.471,97.19,2.81,226,105237350,34198200,67.50,256775000,0,83.39,83.12,0.27

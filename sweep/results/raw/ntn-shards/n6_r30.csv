@@ -1,0 +1,7 @@
+country,field,operator,mnc,gnbs,constellation,r_terr_km,mobility_model,satellite_ho_semantics,agents,duration_s,satellite_served_pct,outage_pct,ntn_attach_events,ntn_return_events,satellite_handovers,sigma_crossing_5g,sigma_crossing_rupa,crossing_advantage_pct,sigma_satellite_ho_5g,sigma_satellite_ho_rupa,satellite_ho_advantage_pct,session_breaks_5g,terrestrial_advantage_pct
+france,anfr,Orange,1,33665,starlink,30.0,stationary,xn,50000,1200,0.0,0.0,0,0,0,0,0,0.0,0,0,0.0,0,0.0
+france,anfr,Orange,1,33665,starlink,30.0,stationary,n2,50000,1200,0.0,0.0,0,0,0,0,0,0.0,0,0,0.0,0,0.0
+france,anfr,Orange,1,33665,starlink,30.0,pedestrian,xn,50000,1200,0.0,0.0,0,0,0,0,0,0.0,0,0,0.0,0,67.02718694724385
+france,anfr,Orange,1,33665,starlink,30.0,pedestrian,n2,50000,1200,0.0,0.0,0,0,0,0,0,0.0,0,0,0.0,0,67.02718694724385
+france,anfr,Orange,1,33665,starlink,30.0,highway,xn,50000,1200,0.03277662763445956,0.0,198,24,459,721500,99900,86.15384615384616,275400,91800,66.66666666666667,328000,67.48282817875288
+france,anfr,Orange,1,33665,starlink,30.0,highway,n2,50000,1200,0.03277662763445956,0.0,198,24,459,721500,99900,86.15384615384616,527850,91800,82.6086956521739,328000,67.48282817875288

@@ -1,0 +1,27 @@
+agents = 40544
+psa = 5
+mobility_model = "RandomWaypoint(50.0, 0.0, 20.0)"
+instrumentation_sha256 = "9df07390e8b82c25e91edc58cb9ec1674cad15843ea48725aa9a9306c9896800"
+core_writes_5g = 901424000
+simulator_commit = "6bcbc7e7d33f10705803c2454695070140d3020f"
+field = "opencellid"
+country = "spain"
+speed_kmh = 50.0
+operator = "Movistar"
+captured_events = 598158
+matrix_sha256 = "4ccbc96431e2b613532268709de19c0b91424b48505d19bc82ef988c393190cc"
+julia = "1.11.9"
+duration_s = 1200.0
+seed = 2026101621
+handovers = 598158
+
+[modified_source_sha256]
+"src/Simulation/DistanceEvents.jl" = "9df07390e8b82c25e91edc58cb9ec1674cad15843ea48725aa9a9306c9896800"
+"src/Simulation/Handover.jl" = "49761d0181cab4e5c9f691be7fd57983f3e4c9fd84d6ee71d9c13dadbfa534e4"
+"src/Simulation.jl" = "bdf99006ec7d89fb0f75981b1e0e02f8efc5e3807eb724c1fd5409f39a48f4a9"
+"scripts/latency_run.jl" = "4e8c816061c03561745d6ecbb72ef83bcad4721fef96ad8f9c51a99bcd918b0d"
+
+[inputs]
+"icc-2027/simulator/data/spain/opencellid/214.csv" = "c9ead7336d646a0683950a4d961986fedf3d36385a142d709461aadc7e19aa91"
+"icc-2027/simulator/data/spain/municipalities.csv" = "2d84b0dfae919ef61e6ecedd5865779b01deada69d67812c930367e28e085ec9"
+"icc-2027/simulator/data/spain/regions.geojson" = "02e6fe12574f926fd046874e98202bf1c6694fa608d874ace6b003e9d4257434"

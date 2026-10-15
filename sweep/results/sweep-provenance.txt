@@ -1,0 +1,9 @@
+generated_utc: 2026-07-30T10:24:17Z
+server: 80-core, 250 GB
+simulator_commit: 656b82d73b9f4c1545f7fc048253965ed14d7bc6
+simulator_branch: chore/multi-country-pipeline
+julia: julia version 1.11.9
+national_rows: 81
+ntn_rows: 216
+national_targets: 27 (country x field x operator), 3 mobility profiles, 1200 s, agents = population x 0.82 / 1000
+ntn_targets: 9 (country x field), r_terr 5/10/20/30 km, 3 profiles, Xn and N2, 50k agent cap, Starlink tles_starlink_550_sgp.txt

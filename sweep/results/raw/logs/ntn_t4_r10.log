@@ -1,0 +1,20 @@
+  Activating project at `~/plmn-graphsim`
+[ Info: Loaded 3109 municipalities.
+[ Info: Filtered 192707 gNBs for Operator ID 999.
+[ Info: Clustering 192707 gNBs into 817 UPF regions...
+[ Info: Clustering 817 Edge UPFs into 5 Centralized UPF regions...
+[ Info: Building Network Graph with 817 UPFs and 192707 gNBs...
+[ Info: Adding 5 Centralized UPFs to the graph...
+>>> ntn_sweep idx:4 50000 1200 results/ntn_shards/n4_r10.csv all 10 xn,n2 starlink
+ntn_sweep: 1 targets x 1 ranges x 3 profiles x 2 semantics -> results/ntn_shards/n4_r10.csv
+
+==========================================================================
+usa/fcc-asr/all-structures: 192707 gNBs, 50000 agents (7.8 min elapsed)
+  r=10km stationary  xn  sat=7.75% up/down=3875/0 satHO=81315 cross-adv=86.2% breaks5G=5820000 (7.1 min)
+  r=10km stationary  n2  sat=7.75% up/down=3875/0 satHO=81315 cross-adv=86.2% breaks5G=5820000 (5.1 min)
+  r=10km pedestrian  xn  sat=7.64% up/down=4198/388 satHO=80029 cross-adv=86.2% breaks5G=6893000 (5.2 min)
+  r=10km pedestrian  n2  sat=7.64% up/down=4198/388 satHO=80029 cross-adv=86.2% breaks5G=6893000 (5.2 min)
+  r=10km highway     xn  sat=9.11% up/down=15406/9830 satHO=94804 cross-adv=86.2% breaks5G=37825000 (5.4 min)
+  r=10km highway     n2  sat=9.11% up/down=15406/9830 satHO=94804 cross-adv=86.2% breaks5G=37825000 (5.1 min)
+
+done in 40.9 min -> results/ntn_shards/n4_r10.csv

@@ -1,0 +1,286 @@
+diff --git a/README.md b/README.md
+index b325473..6344aa2 100644
+--- a/README.md
++++ b/README.md
+@@ -2,164 +2,78 @@
+ 
+ # PLMN-GraphSim
+ 
+-**Research-grade Julia simulator for studying 5G and 6G-RUPA mobility, anchoring, and forwarding-state scalability over real PLMN topologies.**
++Julia simulator for 5G vs 6G-RUPA mobility on real national mobile networks.
+ 
+ [![Julia](https://img.shields.io/badge/Julia-1.11+-9558B2?style=flat-square&logo=julia&logoColor=white)](https://julialang.org/)
+ [![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-2ea44f?style=flat-square)](https://fundacio-i2cat.github.io/PLMN-GraphSim/)
+ [![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue?style=flat-square)](LICENSE)
+-[![Last commit](https://img.shields.io/github/last-commit/Fundacio-i2CAT/PLMN-GraphSim?style=flat-square)](https://github.com/Fundacio-i2CAT/PLMN-GraphSim/commits/main)
+-[![Issues](https://img.shields.io/github/issues/Fundacio-i2CAT/PLMN-GraphSim?style=flat-square)](https://github.com/Fundacio-i2CAT/PLMN-GraphSim/issues)
+ 
+ </div>
+ 
+----
++PLMN-GraphSim places users on an operator's real cell sites (OpenCellID, weighted by
++municipality population), moves them, and counts what every handover costs: which UPFs
++rewrite forwarding entries, how many, and how far up the hierarchy the update travels.
++It runs the same population under 5G anchoring and under 6G-RUPA topological addressing,
++so the two columns are directly comparable. Spain, Portugal and the USA are configured
++out of the box.
+ 
+-PLMN-GraphSim models national-scale mobile-network deployments from geographic population and gNB datasets. It generates agents, places UPFs, simulates mobility and handovers, and reports how much forwarding and control-plane state different architectures need as users move.
++It is not a packet-level simulator. There's no PHY, queueing or TCP; if you need those,
++export the topology and state and feed them to ns-3.
+ 
+-The short version: use PLMN-GraphSim when you want to compare 5G-style anchoring against 6G-RUPA-inspired local mobility mechanisms without building a packet-level simulator first.
++## Mobility viewer
+ 
+-## Highlights
++![Spain, Movistar: users moving over the cell grid, handovers coloured by level](docs/assets/frontend-spain-movistar.png)
+ 
+-- Julia-based discrete-event simulation powered by `ConcurrentSim`.
+-- Real geography workflows for Spain and the USA using municipality, population, and OpenCellID-style gNB data.
+-- Agent generation driven by population distribution and configurable mobility models.
+-- UPF placement via gNB-density-aware clustering for single-tier and two-tier architectures.
+-- 5G and 6G-RUPA mobility accounting, including handover classification and forwarding-state metrics.
+-- Scenario outputs for topology plots, memory/state evolution, and paper-oriented analysis.
+-- Zensical documentation site published through GitHub Pages.
++<sub>Spain, Movistar: 1,622 agents (1 agent = 25,000 users) at 50 km/h, 351 s in, over 46,396
++real gNB sites, 52 edge UPFs and 5 PSAs.</sub>
+ 
+-## What You Can Study
+-
+-| Question | PLMN-GraphSim output |
+-| --- | --- |
+-| How much forwarding state does each UPF hold? | Per-UPF entry counts and memory estimates |
+-| How does mobility affect control-plane churn? | Handover classification and signaling-cost metrics |
+-| What changes between centralized and distributed UPF placement? | Single-tier and two-tier scenario comparisons |
+-| How do 5G and 6G-RUPA mobility mechanisms scale? | Side-by-side state and handover accounting |
+-| How does geography shape behavior? | Spain and USA topology and population-driven agent distributions |
+-
+-## Quickstart
+-
+-### Set Up Julia Environment
+-
+-```bash
+-julia --project=. -e 'using Pkg; Pkg.instantiate()'
+-```
+-
+-### Download Or Refresh Datasets
+-
+-```bash
+-julia --project=. scripts/download_data.jl
+-```
+-
+-The script downloads the immutable version 1.0 release from CORA, requests each
+-tabular file in its original CSV format, and verifies its SHA-256 digest. Large
+-inputs remain outside Git under `data/`.
+-
+-### Run The Interactive Simulator
++`frontend/` is a static deck.gl page. Pick a country, operator, scale and mobility
++profile, and it replays precomputed trajectories, colouring each handover by the level
++it reaches (Xn, N2, PSA relocation). Generate a bundle, then serve the directory:
+ 
+ ```bash
+-julia --project=. main.jl
++julia --project=. main.jl trajectories spain movistar 25000,10000 all 1200 2
++python3 -m http.server 8000      # open http://localhost:8000/frontend/
+ ```
+ 
+-The entry point opens a small menu for running simulations or plotting topology graphs.
++The scale factor is users per agent, so `10000` means more agents than `25000` and a
++heavier page. More options in [frontend/README.md](frontend/README.md).
+ 
+-### Run A Scenario Script
++## Quickstart
+ 
+ ```bash
+-julia --project=. main.jl national spain
+-julia --project=. main.jl national_sweep
+-julia --project=. main.jl ntn_sweep
+-```
+-
+-Use the smaller scripts first while validating an environment, then move to national or mobility-evaluation runs.
+-
+-## Configuration
+-
+-Simulation inputs live in `config.toml`. Countries, operators, simulation duration, scale factors, architecture choices, and mobility settings are configured there.
+-
+-```toml
+-[countries.spain]
+-enabled = true
+-data_dir = "data/spain"
+-mcc = 214
+-
+-  [countries.spain.operators]
+-  movistar = { id = 7, enabled = true }
++julia --project=. -e 'using Pkg; Pkg.instantiate()'
++julia --project=. scripts/download_data.jl    # CORA v1.0 release, SHA-256 checked
++julia --project=. main.jl                     # menu
++julia --project=. main.jl national spain      # or call a run directly
+ ```
+ 
+-Data follows this layout:
+-
+-| Path | Purpose |
+-| --- | --- |
+-| `data/<country>/opencellid/<mcc>.csv` | OpenCellID attachment-point records used as location proxies |
+-| `data/<country>/municipalities.csv` | standardized municipality population and coordinates |
+-| `data/<country>/regions.geojson` | municipality or county boundaries |
+-| `data/processing_scripts/` | Python preprocessing tools for raw geographic datasets |
++Countries, operators, duration, scale and mobility settings live in `config.toml`.
++Input data goes under `data/<country>/` (OpenCellID CSV, `municipalities.csv`,
++`regions.geojson`); the preprocessing scripts are in `data/processing_scripts/`.
+ 
+-## Scenarios
++## Runs
+ 
+-| Scenario | Useful files |
++| What | Command |
+ | --- | --- |
+-| Handover classification behaviour | `test/features/handover_classification.feature` |
+-| National evaluation, one country | `main.jl national spain` |
+-| National sweep, every country, field and operator | `main.jl national_sweep` |
+-| Satellite escalation, every country | `main.jl ntn_sweep` |
+-| Iberian border and federation | `main.jl iberia`, `main.jl federation` |
+-| Deployment sweep | `main.jl deployment_sweep` |
+-| Static mobility frontend | `frontend/index.html` |
+-
+-## Documentation
+-
+-- Documentation site: https://fundacio-i2cat.github.io/PLMN-GraphSim/
+-- Quickstart: https://fundacio-i2cat.github.io/PLMN-GraphSim/quickstart/
+-- Simulator internals: https://fundacio-i2cat.github.io/PLMN-GraphSim/simulation-details/how-simulator-works/
+-- Mobility models: https://fundacio-i2cat.github.io/PLMN-GraphSim/simulation-details/mobility-models/
+-
+-Build the documentation locally:
+-
+-```bash
+-python3 -m venv docs/.venv
+-docs/.venv/bin/pip install -r docs/requirements.txt
+-docs/.venv/bin/zensical build
+-```
++| One country, national evaluation | `main.jl national spain` |
++| Every country, field and operator | `main.jl national_sweep` |
++| Satellite escalation | `main.jl ntn_sweep` |
++| Iberian border, federation | `main.jl iberia`, `main.jl federation` |
++| UPF deployment sweep | `main.jl deployment_sweep` |
++| Browser bundles | `main.jl trajectories ...` |
+ 
+-Serve it while editing:
++Each file in `runs/` documents its own arguments; `main.jl list` prints them.
+ 
+-```bash
+-docs/.venv/bin/zensical serve
+-```
++## Docs and tests
+ 
+-## Development
++The [documentation site](https://fundacio-i2cat.github.io/PLMN-GraphSim/) covers the
++simulator internals and the mobility models. To build it locally, install
++`docs/requirements.txt` in a venv and run `zensical serve`.
+ 
+ ```bash
+-julia --project=. -e 'using Pkg; Pkg.instantiate()'
+ julia --project=. test/runtests.jl
+ julia --project=. test/qa.jl
+ ```
+ 
+-Generate coverage HTML when `lcov` is available:
+-
+-```bash
+-julia --project=. scripts/post-simulation-analysis/generate_coverage_manual.jl
+-genhtml lcov.info --output-directory coverage_html
+-python3 -m http.server -d coverage_html
+-```
+-
+-Then open `http://localhost:8000`.
+-
+-## Project Scope
+-
+-PLMN-GraphSim focuses on topology, mobility, anchoring, and forwarding-state scalability. It is not a packet-level simulator and does not model PHY behavior, queues, TCP/IP dynamics, or radio scheduling.
+-
+-For packet-level studies, use PLMN-GraphSim to generate topology and state artifacts, then connect those outputs to packet simulators such as NS-3.
+-
+-## License
+-
+-PLMN-GraphSim is released under the [AGPL-3.0 license](LICENSE).
+-
+-<div align="center">
+-
+-Built at [Fundacio i2CAT](https://i2cat.net/).
+-
+-</div>
++AGPL-3.0. Built at [Fundació i2CAT](https://i2cat.net/).
+diff --git a/src/Simulation.jl b/src/Simulation.jl
+index ce8bf97..f4addea 100644
+--- a/src/Simulation.jl
++++ b/src/Simulation.jl
+@@ -20,6 +20,7 @@ export run_operator_simulation, init_global_state_for_simulation, create_session
+ include("Simulation/State.jl")
+ include("Simulation/SpatialIndex.jl")
+ include("Simulation/Mobility.jl")
++include("Simulation/DistanceEvents.jl")
+ include("Simulation/Handover.jl")
+ include("Simulation/Layers.jl")
+ include("Simulation/NTN.jl")
+diff --git a/src/Simulation/Core.jl b/src/Simulation/Core.jl
+index da8e14f..2a622c6 100644
+--- a/src/Simulation/Core.jl
++++ b/src/Simulation/Core.jl
+@@ -95,6 +95,15 @@ end
+     end
+ end
+ 
++# Optional per-agent mobility override for mixed populations. Unset (default) keeps
++# the single configured model, so existing runs are unchanged. The picker is filled
++# by the run script from its own RNG, never from the simulation's global stream.
++# Handover hysteresis as a distance ratio; 1.0 keeps the nearest-gNB rule unchanged.
++const HANDOVER_HYSTERESIS = Ref(1.0)
++const AGENT_MOBILITY = Ref{Union{Nothing,Vector{MobilityModel}}}(nothing)
++agent_mobility_model(sim_state, user_id) =
++    AGENT_MOBILITY[] === nothing ? sim_state.config.mobility.model : AGENT_MOBILITY[][user_id]
++
+ """
+     lifecycle_embb_mobile(env, user_id, sim_state, topology)
+ 
+@@ -142,7 +151,7 @@ reproduce bit-for-bit when `mobility.enabled = false`.
+     current_operator = attach_operator
+     current_loc = agent_location
+     update_dt = sim_state.config.mobility.update_interval
+-    model = sim_state.config.mobility.model
++    model = agent_mobility_model(sim_state, user_id)
+ 
+     # Initialize mobility state for this agent
+     mobility_state = MobilityState(agent_location, 0.0, 0.0, 0.0, 0.0)
+@@ -257,6 +266,13 @@ reproduce bit-for-bit when `mobility.enabled = false`.
+         if new_gnb == 0 || new_gnb == current_gnb
+             continue
+         end
++        # Optional A3-style hysteresis, with distance as a proxy for received power:
++        # stay unless the nearest gNB is closer by HANDOVER_HYSTERESIS (ratio; 1.0 = off).
++        if HANDOVER_HYSTERESIS[] > 1.0
++            d_cur = haversine_distance(current_loc, topology.gnb_locations[current_gnb])
++            d_new = haversine_distance(current_loc, topology.gnb_locations[new_gnb])
++            d_cur < HANDOVER_HYSTERESIS[] * d_new && continue
++        end
+         # Cell change detected -> handover.
+         new_upf = topology.gnb_to_upf_map[new_gnb]
+         new_domain = new_upf  # Domain = UPF index
+@@ -272,6 +288,7 @@ reproduce bit-for-bit when `mobility.enabled = false`.
+         # Drive both 5G (Xn/N2) and 6G-RUPA (intra/inter-domain) state machines
+         # with the SAME pre-handover context, counting the event once. Must run
+         # before mutating current_* so the 6G-RUPA path sees the real old domain.
++        DISTANCE_EVENT_TIME[] = now(env)
+         agent_sessions = dispatch_handover!(sim_state, topology, agent_sessions,
+                                             current_gnb, new_gnb,
+                                             current_upf, new_upf,
+diff --git a/src/Simulation/Handover.jl b/src/Simulation/Handover.jl
+index cccf6b6..35d67d9 100644
+--- a/src/Simulation/Handover.jl
++++ b/src/Simulation/Handover.jl
+@@ -313,6 +313,7 @@ function dispatch_handover!(sim_state::SimGlobalState,
+                             old_upf::Int, new_upf::Int,
+                             old_domain_id::Int, new_domain_id::Int,
+                             old_operator_id::Int, new_operator_id::Int)
++    record_distance_event!(sim_state, topology, agent_sessions, old_gnb, new_gnb, old_upf, new_upf)
+     new_sessions = handle_handover_5g!(sim_state, topology, agent_sessions,
+                                        old_upf, new_upf,
+                                        old_domain_id, new_domain_id,

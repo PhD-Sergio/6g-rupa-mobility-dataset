@@ -1,0 +1,16 @@
+  Activating project at `~/plmn-graphsim`
+[ Info: Loaded 3109 municipalities.
+[ Info: Filtered 113210 gNBs for Operator ID 480.
+[ Info: Clustering 113210 gNBs into 817 UPF regions...
+[ Info: Clustering 817 Edge UPFs into 5 Centralized UPF regions...
+[ Info: Building Network Graph with 817 UPFs and 113210 gNBs...
+[ Info: Adding 5 Centralized UPFs to the graph...
+>>> national_sweep idx:7 0 1200 results/shards/t7_pedestrian.csv pedestrian
+national_sweep: 1 targets x 1 profiles -> results/shards/t7_pedestrian.csv
+
+========================================================================
+[1/1] usa/opencellid/Verizon  (0.0 min elapsed)
+  gNBs=113210 edge=817 psa=5 agents=274700 duration=1200s
+  pedestrian  HO=163808     rate=   1.8/u/hr  adv=68.43%  CW5G=246231000    CW6G=0  (31.6 min)
+
+done in 33.1 min -> results/shards/t7_pedestrian.csv

@@ -1,0 +1,2 @@
+country,field,operator,mnc,gnbs,edge_upf,psa,agents,mobility_model,speed_kmh,handovers,ho_per_user_hr,l1_xn_pct,l2_n2_pct,psa_region_crossings,sigma_5g_bytes,sigma_6grupa_bytes,sigma_advantage_pct,core_writes_5g,core_writes_6grupa,anchor_dist_5g_km,anchor_dist_opt_km,stretch_excess_km
+france,anfr,Free,15,33632,96,5,54256,urban,50,572488,31.655,97.57,2.43,1292,351148250,114497600,67.39,857352000,0,102.50,99.70,2.80

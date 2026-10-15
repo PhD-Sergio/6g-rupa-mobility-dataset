@@ -1,0 +1,35 @@
+pathloss_exp = 3.5
+scale_factor = 1000
+agents = 54256
+psa = 5
+mobility_model = "RandomWaypoint(5.0, 0.0, 2.0)"
+instrumentation_sha256 = "e5bafa5744962e45f36f31e125eb72de45e826aaa2977901a69ac767340dbe6e"
+hysteresis_db = 0.0
+core_writes_5g = 399023000
+simulator_commit = "6bcbc7e7d33f10705803c2454695070140d3020f"
+field = "anfr"
+country = "france"
+speed_kmh = 0.0
+operator = "Orange"
+captured_events = 267233
+matrix_sha256 = "ae7aab1e10afed6f5732afb723440372f54b1ffcd0f7d805158606ba5683d2c7"
+julia = "1.11.9"
+duration_s = 1200.0
+seed = 2026101460
+handovers = 267233
+
+[modified_source_sha256]
+"src/Simulation/DistanceEvents.jl" = "e5bafa5744962e45f36f31e125eb72de45e826aaa2977901a69ac767340dbe6e"
+"src/Simulation/Handover.jl" = "49761d0181cab4e5c9f691be7fd57983f3e4c9fd84d6ee71d9c13dadbfa534e4"
+"src/Simulation.jl" = "bdf99006ec7d89fb0f75981b1e0e02f8efc5e3807eb724c1fd5409f39a48f4a9"
+"scripts/latency_run.jl" = "77e5b4efb3cd226e147fff792b24b89cccef92b5bdcf445354972fe979663494"
+
+[mix_counts]
+urban = 10903
+highway = 5403
+pedestrian = 37950
+
+[inputs]
+"icc-2027/simulator/data/france/anfr/208.csv" = "590336b0196df680bd5b3406f2d93dc77ae09d840d42df98a6f322e956769c43"
+"icc-2027/simulator/data/france/municipalities.csv" = "c00f603094a45a16872a1f9718cac4e555cdaabbfcbf4f07fec3c25a5bf3f031"
+"icc-2027/simulator/data/france/regions.geojson" = "8efd36b2330a48399262ef809739cb71ce3cac1905345aefd5388507881699db"

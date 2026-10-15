@@ -1,0 +1,2 @@
+country,field,operator,mnc,gnbs,edge_upf,psa,agents,mobility_model,speed_kmh,handovers,ho_per_user_hr,l1_xn_pct,l2_n2_pct,psa_region_crossings,sigma_5g_bytes,sigma_6grupa_bytes,sigma_advantage_pct,core_writes_5g,core_writes_6grupa,anchor_dist_5g_km,anchor_dist_opt_km,stretch_excess_km
+france,opencellid,Bouygues,20,94931,96,5,54256,highway,120,1942179,107.390,98.04,1.96,2912,1186265150,388435800,67.26,2908480000,0,81.76,81.32,0.43

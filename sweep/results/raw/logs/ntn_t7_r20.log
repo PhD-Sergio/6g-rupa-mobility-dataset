@@ -1,0 +1,20 @@
+  Activating project at `~/plmn-graphsim`
+[ Info: Loaded 4830 municipalities.
+[ Info: Filtered 20077 gNBs for Operator ID 220.
+[ Info: Clustering 20077 gNBs into 126 UPF regions...
+[ Info: Clustering 126 Edge UPFs into 4 Centralized UPF regions...
+[ Info: Building Network Graph with 126 UPFs and 20077 gNBs...
+[ Info: Adding 4 Centralized UPFs to the graph...
+>>> ntn_sweep idx:7 50000 1200 results/ntn_shards/n7_r20.csv all 20 xn,n2 starlink
+ntn_sweep: 1 targets x 1 ranges x 3 profiles x 2 semantics -> results/ntn_shards/n7_r20.csv
+
+==========================================================================
+canada/opencellid/Telus: 20077 gNBs, 30334 agents (0.4 min elapsed)
+  r=20km stationary  xn  sat=15.36% up/down=4655/0 satHO=129147 cross-adv=86.2% breaks5G=6910000 (3.1 min)
+  r=20km stationary  n2  sat=15.36% up/down=4655/0 satHO=129147 cross-adv=86.2% breaks5G=6910000 (2.9 min)
+  r=20km pedestrian  xn  sat=15.9% up/down=4926/100 satHO=133957 cross-adv=86.2% breaks5G=7559000 (2.8 min)
+  r=20km pedestrian  n2  sat=15.9% up/down=4926/100 satHO=133957 cross-adv=86.2% breaks5G=7559000 (2.8 min)
+  r=20km highway     xn  sat=19.49% up/down=11241/3215 satHO=166082 cross-adv=86.2% breaks5G=21557000 (3.1 min)
+  r=20km highway     n2  sat=19.49% up/down=11241/3215 satHO=166082 cross-adv=86.2% breaks5G=21557000 (3.1 min)
+
+done in 18.2 min -> results/ntn_shards/n7_r20.csv

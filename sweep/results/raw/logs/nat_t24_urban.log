@@ -1,0 +1,16 @@
+  Activating project at `~/plmn-graphsim`
+[ Info: Loaded 4830 municipalities.
+[ Info: Filtered 10643 gNBs for Operator ID 610.
+[ Info: Clustering 10643 gNBs into 126 UPF regions...
+[ Info: Clustering 126 Edge UPFs into 4 Centralized UPF regions...
+[ Info: Building Network Graph with 126 UPFs and 10643 gNBs...
+[ Info: Adding 4 Centralized UPFs to the graph...
+>>> national_sweep idx:24 0 1200 results/shards/t24_urban.csv urban
+national_sweep: 1 targets x 1 profiles -> results/shards/t24_urban.csv
+
+========================================================================
+[1/1] canada/ised/Bell  (0.0 min elapsed)
+  gNBs=10643 edge=126 psa=4 agents=30334 duration=1200s
+  urban       HO=182288     rate=  18.0/u/hr  adv=67.37%  CW5G=272980000    CW6G=0  (3.0 min)
+
+done in 3.5 min -> results/shards/t24_urban.csv

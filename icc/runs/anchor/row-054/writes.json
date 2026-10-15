@@ -1,0 +1,14 @@
+{
+ "events": 1540755,
+ "d2_share": 0.06463584411538499,
+ "writes_total": 2310231000,
+ "upfs_written": 817,
+ "busiest_upf": "115",
+ "busiest_writes": 114405000,
+ "busiest_rate_per_s": 95337.5,
+ "mean_rate_per_s": 2356.4167686658507,
+ "p50_upf_writes": 885000.0,
+ "p99_upf_writes": 24346440.00000002,
+ "simulator_writes": 2310231000,
+ "matches_simulator": true
+}

@@ -1,0 +1,16 @@
+  Activating project at `~/plmn-graphsim`
+[ Info: Loaded 3109 municipalities.
+[ Info: Filtered 277160 gNBs for Operator ID 260.
+[ Info: Clustering 277160 gNBs into 817 UPF regions...
+[ Info: Clustering 817 Edge UPFs into 5 Centralized UPF regions...
+[ Info: Building Network Graph with 817 UPFs and 277160 gNBs...
+[ Info: Adding 5 Centralized UPFs to the graph...
+>>> national_sweep idx:9 0 1200 results/shards/t9_highway.csv highway
+national_sweep: 1 targets x 1 profiles -> results/shards/t9_highway.csv
+
+========================================================================
+[1/1] usa/opencellid/T-Mobile  (0.0 min elapsed)
+  gNBs=277160 edge=817 psa=5 agents=274700 duration=1200s
+  highway     HO=5686421    rate=  62.1/u/hr  adv=67.94%  CW5G=8532032000   CW6G=0  (40.4 min)
+
+done in 50.8 min -> results/shards/t9_highway.csv

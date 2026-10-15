@@ -1,0 +1,16 @@
+  Activating project at `~/plmn-graphsim`
+[ Info: Loaded 8044 municipalities.
+[ Info: Filtered 46396 gNBs for Operator ID 7.
+[ Info: Clustering 46396 gNBs into 52 UPF regions...
+[ Info: Clustering 52 Edge UPFs into 5 Centralized UPF regions...
+[ Info: Building Network Graph with 52 UPFs and 46396 gNBs...
+[ Info: Adding 5 Centralized UPFs to the graph...
+>>> national_sweep idx:1 0 1200 results/shards/t1_urban.csv urban
+national_sweep: 1 targets x 1 profiles -> results/shards/t1_urban.csv
+
+========================================================================
+[1/1] spain/opencellid/Movistar  (0.0 min elapsed)
+  gNBs=46396 edge=52 psa=5 agents=40544 duration=1200s
+  urban       HO=591625     rate=  43.8/u/hr  adv=66.95%  CW5G=886120000    CW6G=0  (6.9 min)
+
+done in 7.8 min -> results/shards/t1_urban.csv

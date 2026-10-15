@@ -1,0 +1,25 @@
+agents = 30334
+mobility_model = "GaussMarkov(120.0, 0.85, 5.0)"
+instrumentation_sha256 = "9df07390e8b82c25e91edc58cb9ec1674cad15843ea48725aa9a9306c9896800"
+simulator_commit = "6bcbc7e7d33f10705803c2454695070140d3020f"
+field = "opencellid"
+country = "canada"
+speed_kmh = 120.0
+operator = "Bell"
+captured_events = 400381
+matrix_sha256 = "df076987694c5ba025b9ed45e09bb23b7115c6d08802f06cfb986f9d887a3a21"
+julia = "1.11.9"
+duration_s = 1200.0
+seed = 2026101661
+handovers = 400381
+
+[modified_source_sha256]
+"src/Simulation/DistanceEvents.jl" = "9df07390e8b82c25e91edc58cb9ec1674cad15843ea48725aa9a9306c9896800"
+"src/Simulation/Handover.jl" = "49761d0181cab4e5c9f691be7fd57983f3e4c9fd84d6ee71d9c13dadbfa534e4"
+"src/Simulation.jl" = "bdf99006ec7d89fb0f75981b1e0e02f8efc5e3807eb724c1fd5409f39a48f4a9"
+"scripts/latency_run.jl" = "115adc4149e092c39207874dd5f453749af906f9bc12f7627dbdd8276896a5fc"
+
+[inputs]
+"icc-2027/simulator/data/canada/municipalities.csv" = "3dd7b936a9b7f8d908c501936cb52e798eb3f3bddd7eec708569037fdea41ae4"
+"icc-2027/simulator/data/canada/regions.geojson" = "cc593683c786449e406e27351f6838e097a70ef3b8ab846b0d434920bf516cb6"
+"icc-2027/simulator/data/canada/opencellid/302.csv" = "17e97ba575b454079410a0f59b9f94ef8d8d70915d92efccc6efe969be7cdb1b"

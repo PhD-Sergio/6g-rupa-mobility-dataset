@@ -1,0 +1,16 @@
+  Activating project at `~/plmn-graphsim`
+[ Info: Loaded 34746 municipalities.
+[ Info: Filtered 87410 gNBs for Operator ID 15.
+[ Info: Clustering 87410 gNBs into 96 UPF regions...
+[ Info: Clustering 96 Edge UPFs into 5 Centralized UPF regions...
+[ Info: Building Network Graph with 96 UPFs and 87410 gNBs...
+[ Info: Adding 5 Centralized UPFs to the graph...
+>>> national_sweep idx:13 0 1200 results/shards/t13_highway.csv highway
+national_sweep: 1 targets x 1 profiles -> results/shards/t13_highway.csv
+
+========================================================================
+[1/1] france/opencellid/Free  (0.0 min elapsed)
+  gNBs=87410 edge=96 psa=5 agents=54256 duration=1200s
+  highway     HO=1947965    rate= 107.7/u/hr  adv=67.29%  CW5G=2922838000   CW6G=0  (10.7 min)
+
+done in 11.5 min -> results/shards/t13_highway.csv

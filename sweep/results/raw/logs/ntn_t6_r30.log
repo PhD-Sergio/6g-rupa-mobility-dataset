@@ -1,0 +1,20 @@
+  Activating project at `~/plmn-graphsim`
+[ Info: Loaded 34746 municipalities.
+[ Info: Filtered 33665 gNBs for Operator ID 1.
+[ Info: Clustering 33665 gNBs into 96 UPF regions...
+[ Info: Clustering 96 Edge UPFs into 5 Centralized UPF regions...
+[ Info: Building Network Graph with 96 UPFs and 33665 gNBs...
+[ Info: Adding 5 Centralized UPFs to the graph...
+>>> ntn_sweep idx:6 50000 1200 results/ntn_shards/n6_r30.csv all 30 xn,n2 starlink
+ntn_sweep: 1 targets x 1 ranges x 3 profiles x 2 semantics -> results/ntn_shards/n6_r30.csv
+
+==========================================================================
+france/anfr/Orange: 33665 gNBs, 50000 agents (0.5 min elapsed)
+  r=30km stationary  xn  sat=0.0% up/down=0/0 satHO=0 cross-adv=0.0% breaks5G=0 (5.7 min)
+  r=30km stationary  n2  sat=0.0% up/down=0/0 satHO=0 cross-adv=0.0% breaks5G=0 (4.1 min)
+  r=30km pedestrian  xn  sat=0.0% up/down=0/0 satHO=0 cross-adv=0.0% breaks5G=0 (4.2 min)
+  r=30km pedestrian  n2  sat=0.0% up/down=0/0 satHO=0 cross-adv=0.0% breaks5G=0 (4.0 min)
+  r=30km highway     xn  sat=0.03% up/down=198/24 satHO=459 cross-adv=86.2% breaks5G=328000 (5.2 min)
+  r=30km highway     n2  sat=0.03% up/down=198/24 satHO=459 cross-adv=86.2% breaks5G=328000 (5.1 min)
+
+done in 28.8 min -> results/ntn_shards/n6_r30.csv

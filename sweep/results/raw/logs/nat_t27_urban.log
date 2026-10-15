@@ -1,0 +1,16 @@
+  Activating project at `~/plmn-graphsim`
+[ Info: Loaded 2463 municipalities.
+[ Info: Filtered 12461 gNBs for Operator ID 50.
+[ Info: Clustering 12461 gNBs into 445 UPF regions...
+[ Info: Clustering 445 Edge UPFs into 5 Centralized UPF regions...
+[ Info: Building Network Graph with 445 UPFs and 12461 gNBs...
+[ Info: Adding 5 Centralized UPFs to the graph...
+>>> national_sweep idx:27 0 1200 results/shards/t27_urban.csv urban
+national_sweep: 1 targets x 1 profiles -> results/shards/t27_urban.csv
+
+========================================================================
+[1/1] mexico/opencellid/AT&T  (0.0 min elapsed)
+  gNBs=12461 edge=445 psa=5 agents=103175 duration=1200s
+  urban       HO=581282     rate=  16.9/u/hr  adv=71.18%  CW5G=871889000    CW6G=0  (9.1 min)
+
+done in 9.6 min -> results/shards/t27_urban.csv

@@ -1,0 +1,10 @@
+== instantiate + warm precompile (one process, so shards do not race the cache)
+== smoke against synced data
+portugal,opencellid,MEO,6,6506,18,2,200,highway,120,270,81.000,97.78,2.22,0,165300,54000,67.33,429000,0,71.96,71.96,0.00
+portugal,opencellid,Vodafone,1,7350,18,2,200,highway,120,286,85.800,97.90,2.10,0,174900,57200,67.30,455000,0,62.34,62.34,0.00
+portugal,opencellid,NOS,3,3949,18,2,200,highway,120,226,67.800,95.58,4.42,0,141100,45200,67.97,337000,0,64.16,64.16,0.00
+== launching 81 national shards (40 concurrent)
+   national driver pid 1770441
+== launching 36 Starlink shards (20 concurrent, 50k agent cap per country)
+   starlink driver pid 1770444
+== launched at 2026-07-30T08:45:20Z; 117 jobs total

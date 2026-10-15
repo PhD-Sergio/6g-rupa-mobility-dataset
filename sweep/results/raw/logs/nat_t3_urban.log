@@ -1,0 +1,16 @@
+  Activating project at `~/plmn-graphsim`
+[ Info: Loaded 8044 municipalities.
+[ Info: Filtered 19843 gNBs for Operator ID 1.
+[ Info: Clustering 19843 gNBs into 52 UPF regions...
+[ Info: Clustering 52 Edge UPFs into 5 Centralized UPF regions...
+[ Info: Building Network Graph with 52 UPFs and 19843 gNBs...
+[ Info: Adding 5 Centralized UPFs to the graph...
+>>> national_sweep idx:3 0 1200 results/shards/t3_urban.csv urban
+national_sweep: 1 targets x 1 profiles -> results/shards/t3_urban.csv
+
+========================================================================
+[1/1] spain/opencellid/Vodafone  (0.0 min elapsed)
+  gNBs=19843 edge=52 psa=5 agents=40544 duration=1200s
+  urban       HO=350944     rate=  26.0/u/hr  adv=67.13%  CW5G=525646000    CW6G=0  (5.0 min)
+
+done in 5.9 min -> results/shards/t3_urban.csv

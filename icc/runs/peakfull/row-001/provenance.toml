@@ -1,0 +1,27 @@
+agents = 274700
+psa = 5
+mobility_model = "GaussMarkov(120.0, 0.85, 5.0)"
+instrumentation_sha256 = "e5bafa5744962e45f36f31e125eb72de45e826aaa2977901a69ac767340dbe6e"
+core_writes_5g = 5342298000
+simulator_commit = "6bcbc7e7d33f10705803c2454695070140d3020f"
+field = "fcc-asr"
+country = "usa"
+speed_kmh = 120.0
+operator = "all-structures"
+captured_events = 3559836
+matrix_sha256 = "57a8c9621fdaf8280c920a577242bda91bf048e06df8d03d7fe613bc28f242e0"
+julia = "1.11.9"
+duration_s = 1200.0
+seed = 2026101300
+handovers = 3559836
+
+[modified_source_sha256]
+"src/Simulation/DistanceEvents.jl" = "e5bafa5744962e45f36f31e125eb72de45e826aaa2977901a69ac767340dbe6e"
+"src/Simulation/Handover.jl" = "49761d0181cab4e5c9f691be7fd57983f3e4c9fd84d6ee71d9c13dadbfa534e4"
+"src/Simulation.jl" = "bdf99006ec7d89fb0f75981b1e0e02f8efc5e3807eb724c1fd5409f39a48f4a9"
+"scripts/latency_run.jl" = "f4207060350e96d723b66186ec7cf37c84d43f1d023ebed4827cd2a0b372e495"
+
+[inputs]
+"icc-2027/simulator/data/usa/regions.geojson" = "8cc6a42199611cf570893e154542bde74b83cd70c110e475bc015cf437843af4"
+"icc-2027/simulator/data/usa/asr/310.csv" = "60436fd115901f16e19ec3168ac678bb6c06a164caecf39f38224900f67f1f0d"
+"icc-2027/simulator/data/usa/municipalities.csv" = "4f910aa8958e8e42e026135b659d0d2498bb0a53a61378bb2f939bcd4b49c4d0"

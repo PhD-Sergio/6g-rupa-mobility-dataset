@@ -1,0 +1,17 @@
+{
+ "peak_second_upf": "1",
+ "peak_second": 134,
+ "peak_second_writes": 423000,
+ "events": 575707,
+ "d2_share": 0.0218444451778422,
+ "writes_total": 865873000,
+ "upfs_written": 96,
+ "busiest_upf": "1",
+ "busiest_writes": 297043000,
+ "busiest_rate_per_s": 247535.83333333334,
+ "mean_rate_per_s": 7516.258680555555,
+ "p50_upf_writes": 3616500.0,
+ "p99_upf_writes": 73793949.99999933,
+ "simulator_writes": 865873000,
+ "matches_simulator": true
+}

@@ -1,0 +1,25 @@
+agents = 54256
+mobility_model = "RandomWaypoint(5.0, 0.0, 2.0)"
+instrumentation_sha256 = "9df07390e8b82c25e91edc58cb9ec1674cad15843ea48725aa9a9306c9896800"
+simulator_commit = "6bcbc7e7d33f10705803c2454695070140d3020f"
+field = "opencellid"
+country = "france"
+speed_kmh = 5.0
+operator = "Free"
+captured_events = 136075
+matrix_sha256 = "df076987694c5ba025b9ed45e09bb23b7115c6d08802f06cfb986f9d887a3a21"
+julia = "1.11.9"
+duration_s = 1200.0
+seed = 2026101400
+handovers = 136075
+
+[modified_source_sha256]
+"src/Simulation/DistanceEvents.jl" = "9df07390e8b82c25e91edc58cb9ec1674cad15843ea48725aa9a9306c9896800"
+"src/Simulation/Handover.jl" = "49761d0181cab4e5c9f691be7fd57983f3e4c9fd84d6ee71d9c13dadbfa534e4"
+"src/Simulation.jl" = "bdf99006ec7d89fb0f75981b1e0e02f8efc5e3807eb724c1fd5409f39a48f4a9"
+"scripts/latency_run.jl" = "115adc4149e092c39207874dd5f453749af906f9bc12f7627dbdd8276896a5fc"
+
+[inputs]
+"icc-2027/simulator/data/france/opencellid/208.csv" = "96776a4bebd67edc2af095cf025be9b4b0c0c125393c540e75fd7c24409e3f7a"
+"icc-2027/simulator/data/france/regions.geojson" = "8efd36b2330a48399262ef809739cb71ce3cac1905345aefd5388507881699db"
+"icc-2027/simulator/data/france/municipalities.csv" = "c00f603094a45a16872a1f9718cac4e555cdaabbfcbf4f07fec3c25a5bf3f031"

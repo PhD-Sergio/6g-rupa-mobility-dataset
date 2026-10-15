@@ -1,0 +1,61 @@
+federation,members,K,bilateral_agreements,rupa_enrollments,semantics,mobility_model,handovers,roam_entries,crossings_per_agent_hr,intra_sigma_adv_pct,roam_sigma_adv_pct,session_breaks_5g,roam_path_5g_km,roam_path_opt_km,roam_excess_km
+europe,Movistar ES|MEO PT,2,1,2,ideal_ho,Highway 120km/h (GaussMarkov),1257995,1002,0.0618,67.169,65.385,0,173.645,112.649,60.996
+europe,Movistar ES|MEO PT|Orange FR,3,3,3,ideal_ho,Highway 120km/h (GaussMarkov),3297977,1746,0.0509,67.209,65.385,0,222.544,155.447,67.097
+europe,Movistar ES|MEO PT|Orange FR|Vodafone ES,4,6,4,ideal_ho,Highway 120km/h (GaussMarkov),3426283,357811,10.4337,67.206,65.385,0,144.48,124.179,20.301
+europe,Movistar ES|MEO PT|Orange FR|Vodafone ES|NOS PT,5,10,5,ideal_ho,Highway 120km/h (GaussMarkov),3488409,434347,12.6655,67.173,65.385,0,130.807,113.253,17.554
+europe,Movistar ES|MEO PT|Orange FR|Vodafone ES|NOS PT|SFR FR,6,15,6,ideal_ho,Highway 120km/h (GaussMarkov),4037979,1475226,43.0174,67.078,65.385,0,109.321,80.223,29.098
+europe,Movistar ES|MEO PT,2,1,2,ideal_ho,Pedestrian 5km/h (RWP),88840,36,0.0022,66.904,65.385,0,168.326,99.368,68.958
+europe,Movistar ES|MEO PT|Orange FR,3,3,3,ideal_ho,Pedestrian 5km/h (RWP),230988,82,0.0024,66.892,65.385,0,223.183,154.584,68.599
+europe,Movistar ES|MEO PT|Orange FR|Vodafone ES,4,6,4,ideal_ho,Pedestrian 5km/h (RWP),240578,23988,0.6995,66.895,65.385,0,135.596,110.569,25.027
+europe,Movistar ES|MEO PT|Orange FR|Vodafone ES|NOS PT,5,10,5,ideal_ho,Pedestrian 5km/h (RWP),243231,28726,0.8376,66.893,65.385,0,123.914,102.012,21.902
+europe,Movistar ES|MEO PT|Orange FR|Vodafone ES|NOS PT|SFR FR,6,15,6,ideal_ho,Pedestrian 5km/h (RWP),288625,103617,3.0215,66.845,65.385,0,100.126,91.336,8.79
+europe,Movistar ES|MEO PT,2,1,2,ideal_ho,Urban 50km/h (RWP),678420,336,0.0207,66.982,65.385,0,182.227,114.914,67.313
+europe,Movistar ES|MEO PT|Orange FR,3,3,3,ideal_ho,Urban 50km/h (RWP),1762138,656,0.0191,67.047,65.385,0,219.83,150.918,68.912
+europe,Movistar ES|MEO PT|Orange FR|Vodafone ES,4,6,4,ideal_ho,Urban 50km/h (RWP),1847323,191901,5.5958,67.034,65.385,0,131.465,117.168,14.297
+europe,Movistar ES|MEO PT|Orange FR|Vodafone ES|NOS PT,5,10,5,ideal_ho,Urban 50km/h (RWP),1860736,227576,6.6361,67.031,65.385,0,119.255,106.253,13.002
+europe,Movistar ES|MEO PT|Orange FR|Vodafone ES|NOS PT|SFR FR,6,15,6,ideal_ho,Urban 50km/h (RWP),2186762,790978,23.0648,66.948,65.385,0,97.21,81.772,15.437
+europe,Movistar ES|MEO PT,2,1,2,reestablish,Highway 120km/h (GaussMarkov),1254712,993,0.0613,67.146,86.154,1496000,196.148,129.392,66.755
+europe,Movistar ES|MEO PT|Orange FR,3,3,3,reestablish,Highway 120km/h (GaussMarkov),3294657,1725,0.0503,67.203,86.154,2564000,227.792,165.791,62.001
+europe,Movistar ES|MEO PT|Orange FR|Vodafone ES,4,6,4,reestablish,Highway 120km/h (GaussMarkov),3438898,363610,10.6028,67.196,86.154,544696000,137.691,114.404,23.288
+europe,Movistar ES|MEO PT|Orange FR|Vodafone ES|NOS PT,5,10,5,reestablish,Highway 120km/h (GaussMarkov),3457978,432034,12.5981,67.196,86.154,649332000,128.111,107.855,20.255
+europe,Movistar ES|MEO PT|Orange FR|Vodafone ES|NOS PT|SFR FR,6,15,6,reestablish,Highway 120km/h (GaussMarkov),4048084,1473516,42.9676,67.086,86.154,2213326000,103.778,88.568,15.21
+europe,Movistar ES|MEO PT,2,1,2,reestablish,Pedestrian 5km/h (RWP),87825,35,0.0022,66.93,86.154,50000,182.992,87.536,95.456
+europe,Movistar ES|MEO PT|Orange FR,3,3,3,reestablish,Pedestrian 5km/h (RWP),229633,74,0.0022,66.911,86.154,121000,246.826,136.186,110.64
+europe,Movistar ES|MEO PT|Orange FR|Vodafone ES,4,6,4,reestablish,Pedestrian 5km/h (RWP),238955,24478,0.7138,66.907,86.154,36605000,139.075,108.062,31.013
+europe,Movistar ES|MEO PT|Orange FR|Vodafone ES|NOS PT,5,10,5,reestablish,Pedestrian 5km/h (RWP),242666,28538,0.8322,66.895,86.154,42648000,129.307,100.022,29.286
+europe,Movistar ES|MEO PT|Orange FR|Vodafone ES|NOS PT|SFR FR,6,15,6,reestablish,Pedestrian 5km/h (RWP),287607,103206,3.0095,66.864,86.154,154354000,109.327,76.91,32.417
+europe,Movistar ES|MEO PT,2,1,2,reestablish,Urban 50km/h (RWP),680948,410,0.0253,66.918,86.154,592000,233.965,154.55,79.415
+europe,Movistar ES|MEO PT|Orange FR,3,3,3,reestablish,Urban 50km/h (RWP),1770622,566,0.0165,67.013,86.154,823000,226.457,168.856,57.601
+europe,Movistar ES|MEO PT|Orange FR|Vodafone ES,4,6,4,reestablish,Urban 50km/h (RWP),1834101,188523,5.4973,67.016,86.154,282507000,150.13,125.82,24.31
+europe,Movistar ES|MEO PT|Orange FR|Vodafone ES|NOS PT,5,10,5,reestablish,Urban 50km/h (RWP),1857136,228848,6.6732,67.011,86.154,343520000,137.794,113.626,24.168
+europe,Movistar ES|MEO PT|Orange FR|Vodafone ES|NOS PT|SFR FR,6,15,6,reestablish,Urban 50km/h (RWP),2185996,791745,23.0872,66.929,86.154,1189049000,102.59,82.666,19.924
+north_america,Verizon US|Telus CA,2,1,2,ideal_ho,Highway 120km/h (GaussMarkov),3981384,2586,0.0254,68.523,65.385,0,533.293,442.702,90.591
+north_america,Verizon US|Telus CA|Telcel MX,3,3,3,ideal_ho,Highway 120km/h (GaussMarkov),7842814,5719,0.042,68.296,65.385,0,564.265,412.252,152.013
+north_america,Verizon US|Telus CA|Telcel MX|AT&T US,4,6,4,ideal_ho,Highway 120km/h (GaussMarkov),9480431,1368582,10.058,67.975,65.385,0,387.676,333.66,54.016
+north_america,Verizon US|Telus CA|Telcel MX|AT&T US|Rogers CA,5,10,5,ideal_ho,Highway 120km/h (GaussMarkov),9696396,1545201,11.356,67.972,65.385,0,373.203,319.905,53.299
+north_america,Verizon US|Telus CA|Telcel MX|AT&T US|Rogers CA|Movistar MX,6,15,6,ideal_ho,Highway 120km/h (GaussMarkov),9806776,1882442,13.8344,67.983,65.385,0,336.997,275.002,61.996
+north_america,Verizon US|Telus CA,2,1,2,ideal_ho,Pedestrian 5km/h (RWP),199081,84,0.0008,68.172,65.385,0,687.722,430.88,256.843
+north_america,Verizon US|Telus CA|Telcel MX,3,3,3,ideal_ho,Pedestrian 5km/h (RWP),429228,182,0.0013,67.931,65.385,0,668.836,431.181,237.654
+north_america,Verizon US|Telus CA|Telcel MX|AT&T US,4,6,4,ideal_ho,Pedestrian 5km/h (RWP),514428,68200,0.5012,67.694,65.385,0,398.014,316.243,81.771
+north_america,Verizon US|Telus CA|Telcel MX|AT&T US|Rogers CA,5,10,5,ideal_ho,Pedestrian 5km/h (RWP),529087,79787,0.5864,67.692,65.385,0,388.006,289.617,98.39
+north_america,Verizon US|Telus CA|Telcel MX|AT&T US|Rogers CA|Movistar MX,6,15,6,ideal_ho,Pedestrian 5km/h (RWP),535972,100086,0.7356,67.713,65.385,0,324.05,235.354,88.696
+north_america,Verizon US|Telus CA,2,1,2,ideal_ho,Urban 50km/h (RWP),1829838,925,0.0091,68.342,65.385,0,500.202,416.38,83.822
+north_america,Verizon US|Telus CA|Telcel MX,3,3,3,ideal_ho,Urban 50km/h (RWP),3880839,2226,0.0164,68.062,65.385,0,583.248,406.142,177.105
+north_america,Verizon US|Telus CA|Telcel MX|AT&T US,4,6,4,ideal_ho,Urban 50km/h (RWP),4635706,629230,4.6243,67.8,65.385,0,434.073,367.061,67.012
+north_america,Verizon US|Telus CA|Telcel MX|AT&T US|Rogers CA,5,10,5,ideal_ho,Urban 50km/h (RWP),4750384,730648,5.3697,67.814,65.385,0,410.506,340.967,69.539
+north_america,Verizon US|Telus CA|Telcel MX|AT&T US|Rogers CA|Movistar MX,6,15,6,ideal_ho,Urban 50km/h (RWP),4807729,910913,6.6945,67.819,65.385,0,350.048,287.75,62.298
+north_america,Verizon US|Telus CA,2,1,2,reestablish,Highway 120km/h (GaussMarkov),3962655,2437,0.024,68.532,86.154,3703000,618.444,477.584,140.86
+north_america,Verizon US|Telus CA|Telcel MX,3,3,3,reestablish,Highway 120km/h (GaussMarkov),7851965,5602,0.0412,68.28,86.154,8460000,646.28,414.122,232.158
+north_america,Verizon US|Telus CA|Telcel MX|AT&T US,4,6,4,reestablish,Highway 120km/h (GaussMarkov),9452692,1363459,10.0203,67.993,86.154,2048106000,469.162,313.877,155.285
+north_america,Verizon US|Telus CA|Telcel MX|AT&T US|Rogers CA,5,10,5,reestablish,Highway 120km/h (GaussMarkov),9735913,1549010,11.384,67.971,86.154,2322400000,447.748,289.51,158.237
+north_america,Verizon US|Telus CA|Telcel MX|AT&T US|Rogers CA|Movistar MX,6,15,6,reestablish,Highway 120km/h (GaussMarkov),9738974,1873424,13.7682,67.995,86.154,2810878000,393.121,254.092,139.029
+north_america,Verizon US|Telus CA,2,1,2,reestablish,Pedestrian 5km/h (RWP),197831,96,0.0009,68.184,86.154,128000,515.784,382.853,132.931
+north_america,Verizon US|Telus CA|Telcel MX,3,3,3,reestablish,Pedestrian 5km/h (RWP),432255,212,0.0016,67.923,86.154,319000,564.582,389.997,174.585
+north_america,Verizon US|Telus CA|Telcel MX|AT&T US,4,6,4,reestablish,Pedestrian 5km/h (RWP),513465,67729,0.4978,67.702,86.154,101968000,374.603,317.908,56.694
+north_america,Verizon US|Telus CA|Telcel MX|AT&T US|Rogers CA,5,10,5,reestablish,Pedestrian 5km/h (RWP),529742,79523,0.5844,67.698,86.154,119449000,357.002,301.603,55.399
+north_america,Verizon US|Telus CA|Telcel MX|AT&T US|Rogers CA|Movistar MX,6,15,6,reestablish,Pedestrian 5km/h (RWP),535346,100633,0.7396,67.708,86.154,150953000,295.328,245.599,49.729
+north_america,Verizon US|Telus CA,2,1,2,reestablish,Urban 50km/h (RWP),1835545,908,0.0089,68.32,86.154,1357000,650.119,478.619,171.5
+north_america,Verizon US|Telus CA|Telcel MX,3,3,3,reestablish,Urban 50km/h (RWP),3880738,2195,0.0161,68.057,86.154,3335000,658.942,505.345,153.597
+north_america,Verizon US|Telus CA|Telcel MX|AT&T US,4,6,4,reestablish,Urban 50km/h (RWP),4619026,626778,4.6063,67.818,86.154,943260000,385.956,339.141,46.814
+north_america,Verizon US|Telus CA|Telcel MX|AT&T US|Rogers CA,5,10,5,reestablish,Urban 50km/h (RWP),4746586,729299,5.3598,67.801,86.154,1093439000,374.463,321.962,52.501
+north_america,Verizon US|Telus CA|Telcel MX|AT&T US|Rogers CA|Movistar MX,6,15,6,reestablish,Urban 50km/h (RWP),4833123,914360,6.7198,67.81,86.154,1374084000,323.852,271.425,52.427

@@ -1,0 +1,25 @@
+agents = 8082
+mobility_model = "RandomWaypoint(50.0, 0.0, 20.0)"
+instrumentation_sha256 = "9df07390e8b82c25e91edc58cb9ec1674cad15843ea48725aa9a9306c9896800"
+simulator_commit = "6bcbc7e7d33f10705803c2454695070140d3020f"
+field = "opencellid"
+country = "portugal"
+speed_kmh = 50.0
+operator = "NOS"
+captured_events = 70130
+matrix_sha256 = "df076987694c5ba025b9ed45e09bb23b7115c6d08802f06cfb986f9d887a3a21"
+julia = "1.11.9"
+duration_s = 1200.0
+seed = 2026102010
+handovers = 70130
+
+[modified_source_sha256]
+"src/Simulation/DistanceEvents.jl" = "9df07390e8b82c25e91edc58cb9ec1674cad15843ea48725aa9a9306c9896800"
+"src/Simulation/Handover.jl" = "49761d0181cab4e5c9f691be7fd57983f3e4c9fd84d6ee71d9c13dadbfa534e4"
+"src/Simulation.jl" = "bdf99006ec7d89fb0f75981b1e0e02f8efc5e3807eb724c1fd5409f39a48f4a9"
+"scripts/latency_run.jl" = "115adc4149e092c39207874dd5f453749af906f9bc12f7627dbdd8276896a5fc"
+
+[inputs]
+"icc-2027/simulator/data/portugal/regions.geojson" = "721e866e6b0cb30563e56b9b2a91cb2a1b3e892db706ef1c56b2691606649449"
+"icc-2027/simulator/data/portugal/opencellid/268.csv" = "3ea0c58979079ea231bf6c3d8c5571af84701e62f5bd3a8b41892b90150b7d0f"
+"icc-2027/simulator/data/portugal/municipalities.csv" = "5844ebb5ba35cf8cb0af4bb0f267cbe1f33d1010f94862d3dd9a3efbe8c120d7"

@@ -1,0 +1,20 @@
+  Activating project at `~/plmn-graphsim`
+[ Info: Loaded 3109 municipalities.
+[ Info: Filtered 113210 gNBs for Operator ID 480.
+[ Info: Clustering 113210 gNBs into 817 UPF regions...
+[ Info: Clustering 817 Edge UPFs into 5 Centralized UPF regions...
+[ Info: Building Network Graph with 817 UPFs and 113210 gNBs...
+[ Info: Adding 5 Centralized UPFs to the graph...
+>>> ntn_sweep idx:3 50000 1200 results/ntn_shards/n3_r20.csv all 20 xn,n2 starlink
+ntn_sweep: 1 targets x 1 ranges x 3 profiles x 2 semantics -> results/ntn_shards/n3_r20.csv
+
+==========================================================================
+usa/opencellid/Verizon: 113210 gNBs, 50000 agents (3.2 min elapsed)
+  r=20km stationary  xn  sat=22.27% up/down=11137/0 satHO=235497 cross-adv=86.2% breaks5G=16692000 (7.6 min)
+  r=20km stationary  n2  sat=22.27% up/down=11137/0 satHO=235497 cross-adv=86.2% breaks5G=16692000 (7.0 min)
+  r=20km pedestrian  xn  sat=22.3% up/down=11579/434 satHO=234843 cross-adv=86.2% breaks5G=17939000 (5.9 min)
+  r=20km pedestrian  n2  sat=22.3% up/down=11579/434 satHO=234843 cross-adv=86.2% breaks5G=17939000 (5.8 min)
+  r=20km highway     xn  sat=24.34% up/down=23173/9456 satHO=256558 cross-adv=86.2% breaks5G=48522000 (5.9 min)
+  r=20km highway     n2  sat=24.34% up/down=23173/9456 satHO=256558 cross-adv=86.2% breaks5G=48522000 (5.4 min)
+
+done in 40.9 min -> results/ntn_shards/n3_r20.csv

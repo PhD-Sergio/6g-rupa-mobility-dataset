@@ -1,0 +1,2 @@
+country,field,operator,mnc,gnbs,edge_upf,psa,agents,mobility_model,speed_kmh,handovers,ho_per_user_hr,l1_xn_pct,l2_n2_pct,psa_region_crossings,sigma_5g_bytes,sigma_6grupa_bytes,sigma_advantage_pct,core_writes_5g,core_writes_6grupa,anchor_dist_5g_km,anchor_dist_opt_km,stretch_excess_km
+spain,opencellid,Vodafone,1,19843,52,5,40544,pedestrian,5,43629,3.228,99.11,0.89,52,26390250,8725800,66.94,65573000,0,149.46,149.36,0.10

@@ -1,0 +1,2 @@
+country,field,operator,mnc,gnbs,edge_upf,psa,agents,mobility_model,speed_kmh,handovers,ho_per_user_hr,l1_xn_pct,l2_n2_pct,psa_region_crossings,sigma_5g_bytes,sigma_6grupa_bytes,sigma_advantage_pct,core_writes_5g,core_writes_6grupa,anchor_dist_5g_km,anchor_dist_opt_km,stretch_excess_km
+mexico,opencellid,Movistar,3,14146,445,5,103175,highway,120,1285075,37.366,81.87,18.13,1844,899214800,257015000,71.42,1921923000,0,57.11,56.87,0.23

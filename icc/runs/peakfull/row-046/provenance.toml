@@ -1,0 +1,29 @@
+agents = 103175
+psa = 5
+mobility_model = "GaussMarkov(120.0, 0.85, 5.0)"
+instrumentation_sha256 = "e5bafa5744962e45f36f31e125eb72de45e826aaa2977901a69ac767340dbe6e"
+core_writes_5g = 1720854000
+simulator_commit = "6bcbc7e7d33f10705803c2454695070140d3020f"
+field = "opencellid"
+country = "mexico"
+speed_kmh = 120.0
+operator = "AT&T"
+captured_events = 1146923
+matrix_sha256 = "57a8c9621fdaf8280c920a577242bda91bf048e06df8d03d7fe613bc28f242e0"
+julia = "1.11.9"
+duration_s = 1200.0
+seed = 2026101840
+handovers = 1146923
+
+[modified_source_sha256]
+"src/Simulation/DistanceEvents.jl" = "e5bafa5744962e45f36f31e125eb72de45e826aaa2977901a69ac767340dbe6e"
+"src/Simulation/Handover.jl" = "49761d0181cab4e5c9f691be7fd57983f3e4c9fd84d6ee71d9c13dadbfa534e4"
+"src/Simulation.jl" = "bdf99006ec7d89fb0f75981b1e0e02f8efc5e3807eb724c1fd5409f39a48f4a9"
+"scripts/latency_run.jl" = "f4207060350e96d723b66186ec7cf37c84d43f1d023ebed4827cd2a0b372e495"
+
+[mix_counts]
+
+[inputs]
+"icc-2027/simulator/data/mexico/opencellid/334.csv" = "cd99e4f347ebecedcf9cf65362836d0fc4e9077bdeb552e58bbd07073defd819"
+"icc-2027/simulator/data/mexico/municipalities.csv" = "ad6a0d6b1b49dcd04443fd04197ec2125241b161659a01d83d5dbac6add3fdfd"
+"icc-2027/simulator/data/mexico/regions.geojson" = "d4113c5a4c048682cd8a44c1f5362cb4632f23aef10d509a5fe2489ffbe19349"

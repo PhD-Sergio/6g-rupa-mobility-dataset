@@ -1,0 +1,16 @@
+  Activating project at `~/plmn-graphsim`
+[ Info: Loaded 4830 municipalities.
+[ Info: Filtered 20077 gNBs for Operator ID 220.
+[ Info: Clustering 20077 gNBs into 126 UPF regions...
+[ Info: Clustering 126 Edge UPFs into 4 Centralized UPF regions...
+[ Info: Building Network Graph with 126 UPFs and 20077 gNBs...
+[ Info: Adding 4 Centralized UPFs to the graph...
+>>> national_sweep idx:19 0 1200 results/shards/t19_urban.csv urban
+national_sweep: 1 targets x 1 profiles -> results/shards/t19_urban.csv
+
+========================================================================
+[1/1] canada/opencellid/Telus  (0.0 min elapsed)
+  gNBs=20077 edge=126 psa=4 agents=30334 duration=1200s
+  urban       HO=287381     rate=  28.4/u/hr  adv=67.16%  CW5G=430045000    CW6G=0  (4.1 min)
+
+done in 4.6 min -> results/shards/t19_urban.csv

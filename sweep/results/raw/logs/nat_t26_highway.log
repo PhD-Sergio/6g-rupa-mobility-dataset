@@ -1,0 +1,16 @@
+  Activating project at `~/plmn-graphsim`
+[ Info: Loaded 2463 municipalities.
+[ Info: Filtered 14146 gNBs for Operator ID 3.
+[ Info: Clustering 14146 gNBs into 445 UPF regions...
+[ Info: Clustering 445 Edge UPFs into 5 Centralized UPF regions...
+[ Info: Building Network Graph with 445 UPFs and 14146 gNBs...
+[ Info: Adding 5 Centralized UPFs to the graph...
+>>> national_sweep idx:26 0 1200 results/shards/t26_highway.csv highway
+national_sweep: 1 targets x 1 profiles -> results/shards/t26_highway.csv
+
+========================================================================
+[1/1] mexico/opencellid/Movistar  (0.0 min elapsed)
+  gNBs=14146 edge=445 psa=5 agents=103175 duration=1200s
+  highway     HO=1285075    rate=  37.4/u/hr  adv=71.42%  CW5G=1921923000   CW6G=0  (12.5 min)
+
+done in 13.1 min -> results/shards/t26_highway.csv
